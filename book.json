@@ -39,8 +39,8 @@
       "button": "打赏",
       "alipayText": "支付宝打赏",
       "wechatText": "微信打赏",
-      "alipay": "https://github.com/zhouzhuang006/gitbook/blob/master/image/%E6%94%AF%E4%BB%98%E5%AE%9D%E6%94%AF%E4%BB%98.jpg?raw=true",
-      "wechat": "https://github.com/zhouzhuang006/gitbook/blob/master/image/%E5%BE%AE%E4%BF%A1%E6%94%AF%E4%BB%98.jpg?raw=true"
+      "alipay": "https://github.com/zhouzhuang006/gitbook/blob/master/image/Alipay.jpg?raw=true",
+      "wechat": "https://github.com/zhouzhuang006/gitbook/blob/master/image/WeChatPay.jpg?raw=true"
     },
     "prism": {
       "css": [

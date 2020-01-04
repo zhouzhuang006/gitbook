@@ -24,35 +24,32 @@
         * [Dubbo源码分析](skill/SourceCode/Dubbo/readme.md)
         * [Netty源码分析](skill/SourceCode/Netty/readme.md)
         * [Zookeeper源码分析](skill/SourceCode/Zookeeper/readme.md)
-        * [ActiveMQ源码分析](skill/SourceCode/ActiveMQ/readme.md)
-* 分布式与高并发
-    * 并发编程从入门到放弃
-    * 漫谈分布式架构
-    * 分布式架构基础
-    * 分布式通信框架
-    * 分布式缓存技术
-        * redis
-        * mongoDB
-        * MyCat
-        * 分布式消息中间件
-        * ShardingSphere
-        * Elactic-Job
-        * Nginx
-* 分布式与微服务
-    * 漫谈微服务架构
-    * Spring Boot
-    * Spring Cloud Netflix
-    * Spring Cloud Alibaba
-    * 微服务监控
-        * 分布式实战解决方案
-        * ElasticSearch
-        * ELK
-    * SeaviceMesh
+    * [ActiveMQ源码分析](skill/SourceCode/ActiveMQ/readme.md)
+* [分布式与高并发](highConcurrent/readme.md)
+    * [并发编程从入门到放弃](highConcurrent/Introduction.md)
+    * [漫谈分布式架构](highConcurrent/ramble.md)
+    * [分布式架构基础](highConcurrent/base.md)
+    * [分布式通信框架](highConcurrent/communication.md)
+    * [分布式中间件](highConcurrent/middleware.md)
+        * [MyCat](highConcurrent/middleware/MyCat.md)
+        * [消息队列](highConcurrent/middleware/mq.md)
+        * [ShardingSphere](highConcurrent/middleware/ShardingSphere.md)
+        * [Elactic-Job](highConcurrent/middleware/Elactic-Job.md)
+        * [Nginx](highConcurrent/middleware/Nginx.md)
+* [分布式与微服务](MicroService/readme.md)
+    * [漫谈微服务架构](MicroService/ramble.md)
+    * [Spring Boot](MicroService/SpringBoot.md)
+    * [Spring Cloud Netflix](MicroService/SpringCloudNetflix.md)
+    * [Spring Cloud Alibaba](MicroService/SpringCloudAlibaba.md)
+    * [微服务监控](MicroService/Monitor.md)
+        * [分布式实战解决方案](MicroService/Monitor/plan.md)
+        * [ELK](MicroService/Monitor/ELK.md)
+    * [SeaviceMesh](MicroService/SeaviceMesh.md)
 * [数据库](db/readme.md)
-    * Mysql
-    * Mongo
-    * Redis
-    * ElasticSearch
+    * [MySQLl](db/MySQLl/readme.md)
+    * [Mongo](db/Mongo/readme.md)
+    * [Redis](db/Redis/readme.md)
+    * [ElasticSearch](db/ElasticSearch/readme.md)
 * [性能优化](performance/readme.md)
     * [理解性能优化](performance/understand/readme.md)
     * [JVM调优篇](performance/JVM/readme.md)
@@ -61,18 +58,22 @@
         * [JVM升华篇](performance/JVM/jvm3.md)
         * [JVM实战篇](performance/JVM/jvm4.md)
         * [JVM总结篇](performance/JVM/jvm5.md)
-    * Mysql 调优篇
-    * Tomcat 调优篇
-* 数据结构与算法
-    * 数据结构
-    * 算法篇
-        * 算法基础篇
-        * 贪心算法
-        * 排序算法
-        * 分治算法
+    * [MySQL 调优篇](performance/MySQL/readme.md)
+    * [Tomcat 调优篇](performance/Tomcat/readme.md)
+* [数据结构与算法](algorithms/readme.md)
+    * [数据结构](algorithms/DataStructures/readme.md)
+    * [算法篇](algorithms/Algorithms/readme.md)
+        * [算法基础篇](algorithms/Algorithms/base.md)
+        * [贪心算法](algorithms/Algorithms/base.md)
+        * [排序算法](algorithms/Algorithms/base.md)
+        * [分治算法](algorithms/Algorithms/base.md)
 * [面试宝典](Interview/readme.md)
-    * 高频面试题
-HashMap 讲讲吧~
-* 附件
-    * 软件汇总下载地址
+    * [高频面试题](Interview/HighFrequency.md)
+        * [HashMap实现原理分析](Interview/HighFrequency/HashMap.md)
+        * [lock 与 synchronize区别(实现原理)](Interview/HighFrequency/lock.md)
+        * [面试必问之JVM篇](Interview/HighFrequency/jvm.md)
+        * [垃圾回收机制](Interview/HighFrequency/gc.md)
+        * [SpringBoot 原理](Interview/HighFrequency/SpringBoot.md)
+* [附件](other/readme.md)
+    * [软件汇总下载地址](other/softwareDownloads.md)
 
