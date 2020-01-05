@@ -182,6 +182,18 @@ Git是免费、开源的
 
 一直Next默认就好了，如果需要设置就要仔细读一下安装界面上的选项。
 
+
+
+#### linux 安装 Git
+
+```
+ yum install git 
+```
+
+一路yes  就可以了
+
+
+
 ### 2.2.3、启动Git
 
 安装成功后在开始菜单中会有Git项，菜单下有3个程序：
@@ -2990,8 +3002,6 @@ git push -u origin master
 # 八、视频
 
 https://www.bilibili.com/video/av14813510/
-
-
 
 
 
