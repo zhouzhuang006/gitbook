@@ -9,7 +9,7 @@
 * [Maven](tools/Maven/readme.md)
 * [Git](tools/Git/readme.md)
 * [Jenkins](tools/Jenkins/readme.md)
-* [Sonar](tools/Sonar/readme.md)
+* [FindBugs](tools/FindBugs/FindBugs.md)
 * [Docker](tools/Docker/readme.md)
 * [Gradle](tools/Gradle/readme.md)
 * [Typora](tools/Typora/readme.md)

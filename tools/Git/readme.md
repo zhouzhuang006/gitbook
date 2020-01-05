@@ -3023,3 +3023,6 @@ https://www.liaoxuefeng.com/wiki/896043488029600
 
 https://www.cnblogs.com/best/p/7474442.html
 
+IDEA切换git分支
+
+https://www.jianshu.com/p/8a5d6a93c0a8
