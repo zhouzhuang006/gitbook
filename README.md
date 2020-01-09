@@ -16,7 +16,7 @@
   
 * [性能优化](performance/readme.md)
   
-* [数据结构与算法](algorithms\readme.md)
+* [数据结构与算法](algorithms/readme.md)
   
 * [面试宝典](Interview/readme.md)
 

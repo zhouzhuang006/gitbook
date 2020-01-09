@@ -164,3 +164,12 @@ Java Platform, Standard Edition 8 是一个拥有丰富特性的主要版本。�
 - #### [Java Mission Control 5.3 版本说明](http://www.oracle.com/technetwork/java/javase/jmc53-release-notes-2157171.html)
 
   -  JDK 8 包含 Java Mission Control 5.3。 
+
+
+
+# 参考书籍
+
+《JAVA 8实战》
+
+
+

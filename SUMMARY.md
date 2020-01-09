@@ -6,6 +6,7 @@
     * [Git](tools/Git/readme.md)
     * [Jenkins](tools/Jenkins/readme.md)
     * [FindBugs](tools/FindBugs/FindBugs.md)
+    * [Charles](tools/Charles/readme.md)
     * [Docker](tools/Docker/readme.md)
     * [Gradle](tools/Gradle/readme.md)
     * [Typora](tools/Typora/readme.md)

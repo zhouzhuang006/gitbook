@@ -2,12 +2,12 @@
 
 
 
-* [理解性能优化](performance/understand/readme.md)
-* [JVM调优篇](performance/JVM/readme.md)
-  * [JVM前奏篇](performance/JVM/jvm1.md)
-  * [JVM进行篇](performance/JVM/jvm2.md)
-  * [JVM升华篇](performance/JVM/jvm3.md)
-  * [JVM实战篇](performance/JVM/jvm4.md)
-  * [JVM总结篇](performance/JVM/jvm5.md)
-* [MySQL 调优篇](performance/MySQL/readme.md)
-* [Tomcat 调优篇](performance/Tomcat/readme.md)
+* [理解性能优化](understand/readme.md)
+* [JVM调优篇](JVM/readme.md)
+  * [JVM前奏篇](JVM/jvm1.md)
+  * [JVM进行篇](JVM/jvm2.md)
+  * [JVM升华篇](JVM/jvm3.md)
+  * [JVM实战篇](JVM/jvm4.md)
+  * [JVM总结篇](JVM/jvm5.md)
+* [MySQL 调优篇](MySQL/readme.md)
+* [Tomcat 调优篇](Tomcat/readme.md)
