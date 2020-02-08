@@ -3,5 +3,6 @@ _book/
 node_modules/
 logo.jpg
 *.idea/
+.idea/
 
 

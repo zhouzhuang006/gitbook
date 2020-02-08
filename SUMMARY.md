@@ -59,7 +59,7 @@
         * [ELK](MicroService/Monitor/ELK.md)
     * [SeaviceMesh](MicroService/SeaviceMesh.md)
 * [数据库](db/readme.md)
-    * [MySQLl](db/MySQLl/readme.md)
+    * [MySQL](db/MySQLl/readme.md)
     * [Mongo](db/Mongo/readme.md)
     * [Redis](db/Redis/readme.md)
     * [ElasticSearch](db/ElasticSearch/readme.md)
