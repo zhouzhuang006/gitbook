@@ -1,768 +1,572 @@
-# 设计模式-设计原则
+# 为什么要有设计模式
 
+不用设计模式并非不可以，但是用好设计模式能帮助我们更好地解决实际问题，设计模式最重要的是解耦。设计模式天天都在用，但自己却无感知。我们把设计模式作为一个专题，主要是学习设计模式是如何总结经验的，把经验为自己所用。学设计模式也是锻炼将业务需求转换技术实现的一种非常有效的方式。
 
+### 回顾软件设计原则
 
-### 开闭原则
+七大原则
 
-开闭原则是指一个软件实体如类、模块和函数应该对扩展开放，对修改关闭。所谓的开闭，也正是对扩展的修改连个行为的原则。强调的是用抽象的构建框架，用实现扩展细节。可以提高软件系统的可复用性及可维护性。开闭原则，是面向对象设计中最基础的设计原则。它指导我们如何建立稳定灵活的系统，例如：我们版本更新，我尽可能不修改源代码，但是可以增加新功能。
+| 设计原则     | 解释                                                         |
+| :----------- | :----------------------------------------------------------- |
+| 开闭原则     | 对扩展开放，对修改关闭。                                     |
+| 依赖倒置原则 | 通过抽象使个各类或者模块不互相影响，实现松耦合。             |
+| 单一职责原则 | 一个类、接口、方法只做一件事                                 |
+| 接口隔离原则 | 尽量保证接口的纯洁性，客户端不应该依赖不需要的接口。         |
+| 迪米特法则   | 又叫知道最少原则，一个类对其所依赖的类知道得越少越好。       |
+| 里氏替换原则 | 子类可以扩展父类的功能但不能改变父类原有的功能。             |
+| 合成复用原则 | 尽量使用对象组合、聚合。而不使用继承关系达到代码复用的目的。 |
 
-在现实生活中对开闭原则也有体现。比如，很多互联网公司都实行弹性作息时间，规定每天工作8小时。意思就是说，对于每天工作8小时这个规定是关闭的，但是你什么时候来，什么时候走是开放的。早来早走，晚来晚走。
+先来看个生活案例，当我们开心之时，总会寻求发泄的方式。在学设计模式之前，你可能会这样感叹：
 
-实现开闭原则的核心思想就是面向抽象编程，接下来我们看一段代码：
+`喝酒唱歌，人生真爽。`
 
-以咕咆学院的课程体系为例，首先创建一个课程接口ICourse:
+学完设计模式之后，你可能会这样感叹：
+
+`对酒当歌，人生几何。`
+
+大家对比一下前后的区别，有何感受？
+
+回到代码中，我们来思考一下，设计模式能够帮我们解决哪些问题？
+
+**写出优雅的代码**
+
+先来看一段很多年以前写的代码：
 
 ```java
-public interface ICourse {
-    Integer getId();
-    String getName();
-    Double getPrice();
+public void setCurFom(Gw_exammingFrom curForm, String paramters) throws BaseException {
+    JSONObject jsonObj = new JSONObject(paramters);
+    // 试卷主键
+    if (jsonObj.getString("examinationPaper_id") != null &&
+       (!jsonObj.getString("examinationPaper_id").equals(""))) {
+        curFrom.setExaminationPaper_id(jsonObj.getLong("examinationPaper_id"));
+    }
+    // 剩余时间
+    if (jsonObj.getString("leavTime") != null && (!jsonObj.getString("leavTime").equals(""))) {
+        curForm.setLeavTime(jsonObj.getInt("leavTime"));
+    }
+    // 单位主键
+    if (jsonObj.getString("organiztion_id") != null && (!jsonObj.getString("organization_id").equals(""))) {
+        curForm.setOrganization_id(jsonObj.getString("id").equals(""));
+    }
+    // 主考主键
+    if (jsonObj.getString("id") != null && (!jsonObj.getString("id").equals(""))) {
+        curForm.setId(jsonObj.getLong("id"));
+    }
+    // 考场主键
+    if (jsonObj.getString("examroom_id") != null && (!jsonObj.getString("examroon_id").equals(""))) {
+        curForm.setExamroon_id(jsonObj.getLong("exmaroom_id"));
+    }
+    // 用户主键
+    if (jsonObj.getString("user_id") != null && (!jsonObj.getString("user_id").equals(""))) {
+        curForm.setUser_id(jsonObj.getLong("user_id"));
+    }
+    // 专业
+    if (jsonObj.getString("specialtyCode") != null && (!jsonObj.getString("specialtyCode").equals(""))) {
+        curForm.setSpecialtyCode(jsonObj.getLong("specialtyCode"));
+    }
+    // 岗位
+    if (jsonObj.getString("postionCode") != null && (!jsonObj.getString("postionCode").equals(""))) {
+        curForm.setPostionCode(jsonObj.getLong("postionCOde"));
+    }
+    // 等级
+    if (jsonObj.getString("gradeCode") != null && (!jsonObj.getString("gradeCode").equals(""))) {
+        curFrom.setGradeCode(jsonObj.getLong("gradeCode"));
+    }
+    // 考试开始时间
+    curForm.setExamStartTime(jsonObj.getString("examStartTime"));
+    // 考试结束时间
+    curForm.setExamEndTime(jsonObj.getString("examEndTime"));
+    // 单选题重要数量
+    if (jsonObj.getString("single_selectionImpCount") != null && 
+       (!jsonObj.getString("single_selectionImpCount").equals(""))) {
+        curForm.setSingle_selectionImpCount(jsonObj.getInt("single_selectionImpCount"));
+    }
+    // 多选题重要数量
+    if (jsonObj.getString("multi_selectionImpCount") != null && (!jsonObj.getSrting("multi_selectionImpCount").equals(""))) {
+        curFrom.setMulti_selectionImpCount(jsonObj.getInt("multi_selectionImpCount"));
+    }
+    // 判断题重要数量
+    if (jsonObj.getString("judgementImpCount") != null && (!jsonObj.getString(""))) {
+        
+    }
+    ...
 }
 ```
 
-整体课程生态有Java架构、大数据、人工智能、前端、软件测试等，我们来创建一个Java架构课程的类JavaCourse:
+
+
+优化后的代码：
 
 ```java
-public class JavaCourse implements ICourse {
-	private Integer id;
-    private String name;
-    private Double price;
-    public JavaCourse (Integer id, String name, Double price) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-    }
-    public Integer getId() {
-        return this.id;
-    }
-    public String getName() {
-        return this.name;
-    }
-    public Double getPrice() {
-        return this.price;
-    }
-}
-```
-
-现在我们要给Java架构课程做活动，价格优惠。如果修改JavaCourse中的getPrice()方法，则会存在一定的风险，可能影响其他地方的调用结果。我们如何在不修改原有代码的前提下，实现价格优惠这个功能呢？现在，我们再写一个处理优惠逻辑的类，JavaDiscountCourse类（思考一下为什么要叫JavaDiscountCourse, 而不叫DiscountCourse）:
-
-```java
-public class JavaDiscountCourse extends JavaCourse {
-    public JavaDiscountCourse (Integer id, String name, Double price) {
-        super(id, name, price);
-    }
-    public Double getOriginPrice() {
-        return super.getPrice();
-    }
-    public Double getPrice() {
-        return super.getPrice() * 0.61;
-    }
-}
-```
-
-
-
-### 依赖倒置原则
-
-依赖倒置原则是指设计代码结构时，高层模块不应该依赖底层模块，二者都应该依赖其抽象。抽象不应该依赖细节；细节应该依赖抽象。通过依赖倒置，可以减少类与类之间的耦合性，提高系统的稳定性，提高代码的可读性和可维护性，并能够降低修改程序所造成的风险。接下来看一个案例，还是以课程为例，先来创建一个类Tom:
-
-```java
-public class Tom {
-    public void studyJavaCourse() {
-        System.out.printIn("Tom 在学习Java的课程");
-    }
-    public void studyPythonCourse() {
-        System.out.printIn("Tom 在学习Python的课程");
-    }
-}
-```
-
-来调用一下：
-
-```java
-public static void main(String[] args) {
-    Tom tom = new Tom();
-    tom.studyJavaCourse();
-    tom.studyPythonCourse();
-}
-```
-
-Tom 热爱学习，目前正在学习Java课程和Python课程。大家都知道，学习也是会上瘾的。随着学习兴趣的暴涨，现在Tom还想学习AI人工智能的课程。这个时候，业务扩展，我们的代码要从底层到高层（调用层）一次修改代码。在Tom类中增加studyAICourse()的方法，在高层也要追加调用。如此一来，系统发布以后，实际上是非常不稳定的，在修改代码的同时也会带来意想不到的风险。接下来我们优化代码，创建一个课程的抽象Icourse接口：
-
-```java
-public interface ICourse {
-    void study();
-}
-```
-
-然后写JavaCourse类：
-
-```java
-public class JavaCource implements ICourse {
-    @override
-    public void study() {
-        System.out.printIn("Tom在学习Java课程");
-    }
-}
-```
-
-再实现PythonCourse 类：
-
-```java
-public class JavaCourse implements Icource {
-    @override
-    public void study() {
-        System.out.printIn("Tom在学习Python课程");
-    } 
-}
-```
-
-修改Tom类：
-
-```java
-public class Tom {
-    public void study(ICourse course) {
-        course.study();
-    }
-}
-```
-
-来看调用：
-
-```java
-public static void main(String[] args) {
-    Tom tom = new Tom();
-    tom.study(new JavaCourse());
-    tom.study(new PythonCourse());
-}
-```
-
-我们这时候在看来代码，Tom的兴趣无论怎么暴涨，对于新的课程，我只需要新建一个类，通过传参的方式告诉Tom, 而不需要修改底层代码。实际上这是一种大家非常熟悉的方式，叫依赖注入。注入的方式还有构造方式和setter方式。我们来看构造器注入方式：
-
-```java
-public class Tom {
-    private Icourse course;
-    public Tom(Icourse course) {
-        this.course = course;
-    }
-    public void study() {
-        course.study();
-    }
-}
-```
-
-看调用代码：
-
-```java
-public static void main(String[] args) {
-    Tom tom = new Tom(new JavaCourse());
-    tom.study();
-}
-```
-
-根据构造器方式注入，在调用时，每次都要创建实例。那么，如果Tom是全局单例，则我们就只能选择用Setter方式来注入，继续修改Tom类的代码：
-
-```java
-public class Tom {
-    private ICourse course;
-    public void setCourse(ICourse course) {
-        this.course = course;
-    }
-    public void study() {
-        course.study();
-    }
-}
-```
-
-看调用代码：
-
-```java
-public static void main(String[] args) {
-    Tom tom = new Tom();
-    tom.setCourse(new JavaCourse());
-    tom.study();
-    
-    tom.setCourse(new PythonCource());
-    tom.study();
-}
-```
-
-现在我们再来看最终的类图：
-
-
-
-大家要切记：以抽象为基准比以细节为基准搭建起来的架构要稳定的多，因此大家在拿到需求之后，要面向接口编程，先顶层再细节来设计代码结构。
-
-
-
-### 单一职责原则
-
-单一职责是指不要存在多于一个导致类变更的原因。假设我们有一个Class负责两个职责，一旦发生需求变更，修改其中一个职责的逻辑代码，有可能会导致另一个职责的功能发生故障。这样一来，这个Class存在两个导致类变更的原因。如何解决这个问题呢？我们就要给两个职责分别用两个Class来实现，进行解耦。后期需求变更维护互不影响。这样的设计，可以降低类的复杂度，提高类的可读性，提高系统的可维护性，降低变更引起的风险，总体来说就是一个Class/Interface/Method只负责一项责任。
-
-接下来，我们来看代码示例，还是用课程举例，我们的课程有直播课程和录播课程。直播课不能快进和快退，录播可以任意的反复观看，功能职责不一样。还是创建一个Course类：
-
-```java
-public class Course {
-    public void study(String courseName) {
-        if ("直播课".equals(courseName)) {
-            System.out.printIn(courseName + "不能快进");
-        } else {
-            System.out.printIn(courseName + "可以反复回看");
+public class Exampaper extends Gw_exmamingFrom {
+    private String examinationPaperId; // 试卷主键
+    ...
+       
+    public void setCurFrompublic void setFrom(Gw_exammingForm curForm, String paramters) throws BaseException {
+        try {
+            JSONObject jsonObj = new JSONObject(parameters);
+            ExamPaper examPaper = JSONObject.parseObject(parameters, ExamPaper.class);
+            curFrom = examPaper;
+        } catch (Exception e) {
+            e.printStrackTrace();
         }
     }
 }
 ```
 
-看代码调用：
+### 更好地重构项目
 
-```
-public static void main(String[] args) {
-    Course course = new Course();
-    course.study("直播课");
-    course.study("录播课");
-}
-```
-
-从上面代码来看， Course类承担了两种处理逻辑。假如，现在要对课程进行加密，那么录播课和直播课的加密逻辑不一样，必须要修改代码。而修改代码逻辑势必会互相影响造成不可控的风险。我们对职责进行分离解耦，来看代码，分别创建两个类ReplayCourse和LiveCourse:
-
-LiveCourse 类：
+平时我们写的代码虽然满足了需求但往往不利于项目的开发与维护，以下面的JDBC代码为例：
 
 ```java
-public class LiveCouse {
-    public void study(String courseName) {
-        System.out.pringIn(courseName + "不能快进看");
-    }
-}
-```
-
-ReplayCourse类：
-
-```java
-public class ReplayCourse {
-    public void study(String courseName) {
-        System.out.printIn(courseName + "可以反复回");
-    }
-}
-```
-
-调用代码：
-
-```java
-public static void main(String[] args) {
-    LiveCource liveCourse = new LiveCourse();
-    liveCourse.study("直播课");
-    
-    RepalyCourse replayCourse = new ReplayCourse();
-    repalyCourse.study("录播课");
-}
-```
-
-业务继续发展，课程要做权限。没有付费的学员可以获取课程基本信息，已经付费的学员可以获得视频流，即学习权限。那么对于控制课程层面上至少有两个职责。我们可以把展示职责和管理职责分离开来，都实现同一个抽象依赖。设计一个顶层接口，创建ICourse接口：
-
-```java
-public interface ICource {
-    
-    // 获得基本信息
-    String getCourseName();
-    
-    // 获得视频流
-    byte[] getCourseVideo();
-    
-    // 学习课程
-    void studyCourse();
-    
-    // 退款
-    void refundCourse();
-    
-}
-```
-
-我们可以把这个接口拆开成两个接口，创建一个接口ICourseInfo 和 ICourseManager:
-
-ICourseInfo 接口：
-
-```java
-public interface ICourseInfo {
-    String getCourseName();
-    byte[] getCourseVideo();
-}
-```
-
-ICourseManager 接口：
-
-```java
-public interface ICourseManager {
-    void studtCourse();
-    void refundCourse();
-}
-```
-
-
-
-下面我们来看一下方法层面的单一职责设计，有时候，我们为了偷懒，通常会把一个方法写成下面这样：
-
-```java
-private void modifyUserInfo(String userName, String address) {
-    userName = "Tom";
-    address = "Changsha";
-}
-```
-
-还可能写成这样：
-
-```java
-private void modifyUserInfo(String userName, String... fileds) {
-    userName = "Tom";
-}
-private void modiyUserInfo(String userName, String address, boolean bool) {
-    if (bool) {
-        
-    } else {
-        
-    }
-}
-```
-
-显然，上面的modifyUserInfo() 方法中都承担了多个职责，既可以修改userName，也可以修改address， 甚至更多，明显不符合单一职责。那么我们做如下修改，把这个方法拆成两个：
-
-```java
-private void modifyUserName(String userName) {
-    userName = "Tom";
-}
-private void modifyAddress(String address) {
-    address = "Changsha";
-}
-```
-
-
-
-
-
-### 接口隔离原则
-
-
-
-### 接口隔离原则
-
-接口隔离原则是指用多个专门的接口，而不是用单一的总接口，客户端不应该依赖它不需要的接口。这个原则指导我们在设计接口时应当注意一下几点：
-
-1. 一个类对一类的依赖应该建立在最小的接口之上。
-2. 建立单一接口，不要建立庞大臃肿的接口。
-3. 尽量细化接口，接口中的方法尽量少（不是越少越好，一定要适度）。
-
-接口隔离原则符合我们常说的高内聚低耦合的设计思想，从而使得类具有很好的可读性、可扩展性和可维护性。我们在设计接口的时候，要花时间去思考，要考虑业务模型，包括以后有可能发生变更的地方还要做一些预判。所以，对于抽象，对业务模型的理解是非常重要的。下面我们来看一段代码，写一个动物行为的抽象：
-
-IAnimal 接口：
-
-```java
-public interface IAnimal {
-    void eat();
-    void fly();
-    void swim();
-}
-```
-
-Bird 类实现：
-
-```java
-public class Bird implements IAnimal {
-    @Override
-    public void eat() {}
-    @Override
-    public void fly() {}
-    @Override
-    public void swim() {}
-}
-```
-
-Dog 类实现：
-
-```java
-public class Dog implements IAnimal {
-    @Override
-    public void eat() {}
-    @Override
-    public void fly() {}
-    @Override
-    public void swim() {}
-}
-```
-
-可以看出，Bird的swim()方法可能只能空着，Dog的fly() 方法显然不可能的。这时候，我们针对不同动物行为来设计不同的接口，分别设计IEatAnimal, IFlyAnimal 和ISwimAnimal 接口，来看代码：
-
-IEatAnimal接口：
-
-```java
-public interface IEatAnimal {
-    void eat();
-}
-```
-
-IFlyAnimal接口：
-
-```java
-public interface IFlyAnimal {
-    void fly();
-}
-```
-
-ISwimAnimal 接口：
-
-```java
-public interface ISwimAnimal {
-    void swim();
-}
-```
-
-Dog只实现IEatAnimal和ISwimAnimal接口：
-
-```java
-public class Dog implements ISwimAnmal, IEatAnmal {
-    @Override
-    public void eat() {}
-    @Override
-    public void swim() {}
-}
-```
-
-
-
-### 迪米特法则
-
-迪米特法则是指一个。对象应该对其他对象保持最少的了解，又叫最少知道原则， 尽量较低类与类之间的耦合。迪米特法则主要强调只和朋友交流，不和陌生人说话。出现在成员变量、方法的输入、输出参数中的类都可以称之为成员朋友类，而出现在方法体内部的类不属于朋友类。
-
-现在来设计一个权限系统，Boss 需要查看目前发布到线上的课程数量。这时候，Boss 要找到TeamLeader去进行统计，TeamLeader 再把统计结果告诉Boss。接下来我们还是来看代码：
-
-Course 类：
-
-```java
-public class Course {
-
-}
-```
-
-TeamLeader类：
-
-```java
-public class TeamLeader {
-    public void checkNumberOfCourses(List<Course> courseList) {
-        System.out.printIn("目前已发布的课程数量是：" + courseList.size());
-    }
-}
-```
-
-Boss类
-
-```java
-public class Boss {
-	public void commandCheckNumber(TeamLeader teamLeader) {
-	    // 模拟Boss一页一页往下翻页， TeamLeader 实时统计
-	    List<Course> courseList = new ArrayList<>();
-	    for (int i = 0; i < 20; i ++) {
-	        courseList.add(new Course());
-	    }
-	    teamLeader.checkNumberOfCourses(courseList);
-	}
-}
-```
-
-
-
-测试代码：
-
-```java
-public static void main(String[] args) {
-    Boss boss = new Boss();
-    TeamLeader teamLeader = new TeamLeader();
-    boss.commandCheckNumber(teamLeader);
-}
-```
-
-写到这里，其实功能已经都已经实现，代码看上去也没什么问题。根据迪米特原则，Boss只想要结果，不需要跟Course产生直接的交流。而TeamLeader统计需要引用Course对象。Boss和Course并不是朋友，从下面的类图就可以看出来：
-
-
-
-下面来对代码进行改造：
-
-TeamLeader 类：
-
-```java
-public class TeamLeader {
-    public void checkNumberOfCourses() {
-        List<Course> courseList = new ArrayList<Course>();
-        for (int i = 0; i < 20; i ++) {
-            courseList.add(new Course());
+public void save(Student stu) {
+    String sql = "INSERT INTO t_student(name, age) VALUES(?,?)";
+    Connection conn = null;
+    Statement st = null;
+    try {
+        // 1. 加载注册驱动
+        Class.forName("com.mysql.jdbc.Driver");
+        // 2. 获取数据库连接
+        conn = DriverManager.getConnection("jdbc:mysql:///jdbcdemo", "root", "root");
+        // 3. 创建语句对象
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setObject(1, stu.getName());
+        ps.setObject(2, stu.getAge());
+        // 4. 执行SQL语句
+        ps.executeUpdate();
+        // 5. 释放资源
+    } catch (Exception e) {
+        e.printStrckTrace();
+    } finally {
+        try {
+            if (st != null)
+                st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (conn != null) 
+                    conn.close();
+            } catch(SQLException e) {
+                e.printStackTrace();
+            }
         }
-        System.out.printIn("目前已发布的课程数量是：" + courseList.size());
+    }
+}
+
+// 删除学生信息
+public void delete(Long id) {
+    String sql = "DELETE FROM t_student WHERE id=?";
+    Connection conn = null;
+    Statement st = null;
+    try {
+        // 1. 加载注册驱动
+        Class.forName("com.mysql.jdbc.Driver");
+        // 2. 获取数据库连接
+        conn = DriverManager.getConnection("jdbc:mysql:///jdbcdemo", "root", "root");
+        // 3. 创建语句对象
+        PreparedStatement ps = conn.prepareStatement(sql);
+        ps.setObject(1, stu.getName());
+        ps.setObject(2, stu.getAge());
+        // 4. 执行SQL语句
+        ps.executeUpdate();
+        // 5. 释放资源
+    } catch (Exception e) {
+        e.printStrckTrace();
+    } finally {
+        try {
+            if (st != null)
+                st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (conn != null) 
+                    conn.close();
+            } catch(SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
 ```
 
-Boss类：
+上述代码中功能没问题，但是代码重复的太多，因此我们可以进行抽取，把重复的代码放到一个工具类JdbcUtil里。
 
 ```java
-public class Boss {
-    public void commandCheckNumber(TeamLeader teamLeader) {
-        teamLeader.checkNumberOfCourses();
+// 工具类
+public class JdbcUtil {
+    private JdbcUtil() {}
+    static {
+        // 1. 加载注册驱动
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static Connection getConnection() {
+        try {
+            // 2.获取数据库连接
+            return DriverManager.getConnection("jdbc:mysql:///jdbcdemo", "root", "root");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+    
+    // 释放资源
+    public static void close(ResultSet rs, Statement st, Connection conn) {
+        try {
+            if (rs != null) 
+                rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (st != null)
+                    st.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (conn != null)
+                        conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
     }
 }
 ```
 
-再来看下面的类图， Course和Boss已经没有关联了。
-
-学习软件设计原则，千万不能形成强迫症。碰到业务复杂的场景，我们需要随机应变。
-
-
-
-### 里氏替换原则
-
-里氏替换原则是指如果对每一个类型的T1的对象o1, 都有类型为T2的对象 o2, 使得以T1定义的所有程序P在所有的对象o1都替换成o2时。程序P的行为没有变化，那么类型T2是类型T1的子类型。
-
-定义看上去哈市比较抽象，我们重新理解一下，可以理解为一个软件实体如果适合一个父类的话，那一定是适合于其子类，所有引用父类的地方必须能透明地使用其子类的对象，子类对象能够替换父类对象，而程序逻辑不变。根据这个理解，我们总结一下：引申含义：子类可以扩展父类的功能，但不能改变父类原有的功能。
-
-1. 子类可以实现父类的抽象方法，单不能覆盖父类的非抽象方法。
-2. 子类中可以增加自己特有方法。
-3. 当子类的方法重载父类的方法，方法的前置条件（即方法的输入/入参）要比父类方法的输入参数更宽裕。
-4. 当子类的方法实现父类的方法（重写、重载或实现抽象方法），方法的后置条件（即方法的输出、返回值）要比父类更严格或相等。
-
-在前面讲开闭原则的时候埋下了一个伏笔，我们集的在获取折后是重写覆盖了父类的getPrice()方法，增加了一个获取源代码的方法getOriginPrice(), 显然就违背了里氏替换原则。我们修改一下代码，不应该覆盖getPrice() 方法，增加getDiscountPrice()方法：
+在实现类中直接调用工具类JdbcUtil 中的方法即可
 
 ```java
-public class JavaDiscountCourse extends JavaCourse {
-    public JavaDiscountCourse(Integer id, String name, Double price) {
-        super(id, name, price);
-    }
-    public Double getDiscountPrice() {
-        return super.getPrice() * 0.61;
+// 增加学生信息
+public void save(Student stu) {
+    String sql = "INSERT INTO t_student(name, age) VALUES(?,?)";
+    Connection conn = null;
+    PreparedStatement ps = null;
+    try {
+        conn = JDBCUtil.getConnection();
+        // 3.创建语句对象
+        ps = conn.prepareStatement(sql);
+        ps.setObject(1, stu.getName());
+        ps.setObject(2, stu.getAge());
+        // 4. 执行SQL语句
+        ps.executeUpdate();
+        // 5.释放资源
+    } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (st != null)
+                    st.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } finally {
+                try {
+                    if (conn != null)
+                        conn.close();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+}
+
+// 删除学生信息
+public void delete(Long id) {
+    String sql = "DELETE FROM t_student WHERE id=?";
+    Connection conn = null;
+    PreparedStatement ps = null;
+    try {
+        conn = JDBCUtil.getConnection();
+        // 3. 创建语句对象
+        ps = conn.prepareStatement(sql);
+        ps.setObject(1, id);
+        ps.executeUpdate();
+        // 5. 释放资源
+    } catch (SQLException e) {
+        e.printStackTrace();
+    } finally {
+        try {
+            if (st != null)
+                st.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (conn != null)
+                    conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
+...
+
 ```
 
-使用里氏替换原则有以下优点：
+虽然完成了重复代码的抽取，但数据库中的账号密码等直接显示在代码中，不利于后期账户密码改动的维护，我们可以建立个db.propertise文件用来存储这些信息
 
-1. 约束继承泛滥，开闭原则的一种体现。
+```xml
+driverClassName = com.mysql.jdbc.Drver
+url = jdbc:mysql:///jdbcdemo
+username = root
+password = root
+```
 
-2. 加强程序的健壮性，同时变更时也可以做的非常好的兼容性，提高程序的维护性、扩展性。降低雪球变更时引入的风险。
-
-   现在来描述一个经典的业务场景，用正方形、矩形和四边形的关系说明里氏替换原则，我们都知道正方形是一个特殊的长方形，那么就可以创建一个长方形父类Rectangle类：
-
-   ```java
-   public class Rectangle {
-       private long height;
-       private long width;
-       @Override
-       public long getWidth() {
-           return width;
-       }
-       @Override
-       public long getLength() {
-           return length;
-       }
-       public void setLength(long length) {
-           this.length = length;
-       }
-       public void setWidth(long width) {
-           this.width = width;
-       }
-   }
-   ```
-
-   创建正方形Square类继承长方形：
-
-   ```java
-   public class Square extends Rectangle {
-       private long length;
-       public long getLength() {
-           return length;
-       }
-       public void setLength(long length) {
-           this.length = length;
-       }
-       @Override
-       public long getWidth() {
-           return getLength();
-       }
-       @Override
-       public long getHeight() {
-           return getLength();
-       }
-       @Override
-       public void setHeight(long height) {
-           setLength(height);
-       }
-       @Override
-       public void setWidth(long width) {
-           setLength(width);
-       }
-   }
-   ```
-
-   在测试类中创建resize()方法，根据逻辑长方形的宽应该大于等于高，我们让高一直自增，知道高等于宽变成正方形：
-
-   ```java
-   public static void resize() {
-       while (rectangle.getWidth() >= rectangle.getHeight()) {
-           rectangle.setHeight(ractangle.getHeight() + 1);
-       }
-       System.out.printIn("resize方法结束 \n width:" + rectangle.getWidth() + "\n, height:" + rectangle.getHeight());
-   }
-   ```
-
-   测试代码：
-
-   ```java
-   public static void main(String[] args) {
-       Rectangle rectangle = new Rectangle();
-       rectangle.setWidth(20);
-       rectangle.setHeight(10);
-       resize(rectangle);
-   }
-   ```
-
-   运行结果：
-
-   ```
-   width:20,height:11
-   
-   ```
-
-   发现高比宽还大了，在长方形中是一种非常正常的情况。现在我们再来看下面的代码，把长方形Rectangle 替换成它的子类正方形Square，修改测试代码：
-
-   ```java
-   public static void main(String[] args) {
-       Square square = new Square();
-       square.setLength(10);
-       resize(square);
-   }
-   ```
-
-   这时候我们运行的时候出现了死循环，违背了里氏替换原则，将父类替换为子类后，程序运行结果没有达到预期。因此，我们的代码设计是一定风险的。里氏替换原则只存在父类与子类之间，约束继承泛滥。我们再来创建一个基于长方形与正方形共同的抽象四边形Quadrangle接口：
-
-   ```java
-   public interface Quadrangle {
-       long getWidth();
-       long getHeight();
-   }
-   ```
-
-   修改长方形Rectangle类：
-
-   ```java
-   public class Rectangle implements Quadrangle {
-       private long height;
-       private long width;
-       @Override
-       public long getWidth() {
-           return width;
-       }
-       public long getHeight() {
-           return height;
-       }
-       public void setHeight(long height) {
-           this.height = height;
-       }
-       public void setWidth(long width) {
-           this.width = width;
-       }
-   }
-   ```
-
-   修改正方形类Square类：
-
-   ```java
-   public class Square implements Quadrangle {
-       private long length;
-       public long getLength() {
-           return length;
-       }
-       public void setLength(long length) {
-           this.length = length;
-       }
-       @Override
-       public long getWidth() {
-           return length;
-       }
-       @Override
-       public long getHeight() {
-           return length;
-       }
-   }
-   ```
-
-   此时，如果我们把resize()方法的参数替换成四边形Quadrangle类，方法内部就会报错。因为正方形Square已经没有了setWidth()和setHeight()方法了。因此，为了约束继承泛滥，resize()的方法参数只能用Rectangle长方形。当然，我们再后面的设计模式课程中还会继续升入讲解。
-
-
-
-### 合成复用原则
-
-合成复用原则是指尽量使用对象组合成/聚合，而不是继承关系达到软件复用的目的。可以使系统更加灵活，降低类与类之间的耦合度，一个类的变化对其他类造成的影响相对较少。
-
-继承我们叫做白箱复用，相当于把所有的实现细节暴露给子类。组合/聚合页称之为黑箱复用，对类以外的对象是无法获取到实现细节的。要根据具体的业务场景来做代码设计，其实也都需要遵循OOP模型。还是以数据库操作为例，先来创建DBConnection类：
+只需在工具类JdbcUtil 中获取里面的信息即可
 
 ```java
-public class DBConnection {
-    public String getConnection() {
-        return "MySQL 数据库连接";
+static {
+    // 1. 加载注册驱动
+    try {
+        ClassLoader loder = Thread.currentThread().getContextClassLoader();
+        InputStream inputStream = loader.getResourceAsStream("db.properties");
+        p = new Properties();
+        p.load(inputStream);
+        Class.forName(p.getProperty("driverClassName"));
+    } catch (Exception e) {
+        e.printStackTrace();
     }
+}
+
+public static Connection getConnection() {
+    try {
+        // 2.获取数据库连接
+        return DriverManager.getConnection(p.getProperty("url"), p.getProperty("username"), p.getProperty("password"));
+    } catch(Execption e) {
+        e.printStackTrace();
+    }
+    return null;
 }
 ```
 
-创建ProductDao类：
+抽取通过参数传递进来，无法到这里貌似已经完成，但在实现类中，依然存在部分重复代码，在DML操作中，除了SQL和设置值得不同，其他都相同，将相同的抽取出去，不同的部分通过参数传递进来，无法直接放在工具类中，这时我们可以创建一个模板类JdbcTemplate, 创建一个DML和DQL的模板来进行对代码的重构。
 
 ```java
-public class ProductDao {
-    private DBConnection dbConnection;
-    public void setDbConnection(DBConnection dbConnection) {
-        this.dbConnection = dbConnection;
+// 查询统一模板
+public static List<Student> query(String sql, Object...params) {
+    List<Student> list = new ArrayList<>();
+    Connection conn = null;
+    PrepareStatement ps = null;
+    ResultSet rs = null;
+    try {
+        conn = JDBCUtil.getConnection();
+        ps = conn.prepareStatement(sql);
+        // 设置值
+        for (rs.next()) {
+            long id = rs.getLong("id");
+            String name = rs.getString("name");
+            int age = rs.getInt("age");
+            Student stu = new Student(id, name, age);
+            list.add(stu);
+        }
+        // 5. 释放资源
+    } catch (Exception) {
+        e.printStackTrace();
+    } finally {
+        JDBCUtil.close(rs, ps, conn);
     }
-    public void addProduct() {
-        String conn = dbConnection.getConnection();
-        System.out.printIn("使用" + conn + "增加产品");
-    }
+    return list;
 }
 ```
 
-这就是一种非常典型的合成复用原则应用场景。但是，目前的设计来说，DBConnection还不是一种抽象，不便于系统扩展。目前的系统支持MySQL数据库连接，假设业务发生变化，数据库操作层要支持Oracle数据库。当然，我们可以在DBConnection中增加对Oracle数据库支持的方法。但是违背了开闭原则。其实，我们可以不必修改Dao的代码，将DBConnection修改为abstract，来看代码：
+实现类直接调用方法即可。
 
 ```java
-public abstract class DBConnection {
-    public abstract String getConnection();
+// 增加学生信息
+public void save(Student stu) {
+    String sql = "INSERT INTO t_student(name, age) VALUES(?,?)";
+    Object[] params = new Object[] {stu.getName, stu.getAge()};
+    JdbcTemplate.update(sql, params);
+}
+
+// 删除学生信息
+public void delete(Long id) {
+    String sql = "DELETE FROM t_student WHERE id = ?";
+    JdbcTemplae.update(sql, id);
+}
+
+// 修改学生信息
+public void update(Student stu) {
+    String sql = "";
+    Object[] params = new Object[]{stu.getName(), stu.getAge(), stu.getId()};
+    JdbcTemplate.update(sql, params);
+}
+
+public Student get(Long id) {
+    String sql = "SELECT * FROM t_student WHERE id = ?";
+    List<Student> list = JDBCTemplate.query(sql, id);
+}
+
+public List<Student> list() {
+    String sql = "SELECT * from t_student";
+    return JDBCTemplate.query(sql);
 }
 ```
 
-然后，将MySQL的逻辑抽离：
+这样重复的代码基本就解决了，但是又有很严重的问题就是这个程序DQL操作中只能处理Student类和t_student表的相关数据，无法处理其他类如：Teacher类和t_teacher表。不同表（不同的对象），不同的表就应该有不同列，不同列处理结果集的代码就应该不一样，处理结果集的操作只有DAO自己最清楚，也就是说，处理结果的方法压根就不应该放在模块中，应该由每个DAO自己来处理。因此我们可以创建一个IRowMapper接口处理结果集
 
 ```java
-public class MySQLConnection extends DBConnection {
-    @Override
-    public String getConnection() {
-        return "MySQL 数据库连接";
+public interface IRowMapper {
+   // 处理结果集
+    List rowMapper(ResultSet rs) throws Exception;
+}
+
+```
+
+DQL模板类中调用IRowMapper接口中handle方法，提醒实现类去自己实现mapping方法
+
+```java
+public static List<Student> query(String sql, IRowMapper rsh, Object...params) {
+    List<Student> list = new ArrayList<>();
+    Connection conn = null;
+    PreparedStaement ps = null;
+    ResultSet rs = null;
+    try {
+        conn = JdbcUtil.getConnection();
+        ps = conn.prepareStatement(sql);
+        // 设置值
+        for (int i = 0; i < params.length; i ++) {
+            ps.setObject(i+1, params[i]);
+        }
+        rs = ps.executeQuery();
+        return rsh.mapping(rs)
+        // 5. 释放资源    
+    } catch (Exception e) {
+        e.printStackTrace();
+    } finally {
+        JdbcUtil.clone(re, ps, conn);
+    }
+    return list;
+}
+```
+
+实现类自己去实现IRowMapper 接口的mapping 方法， 想要处理什么类型数据在里面定义即可
+
+```java
+public Student get(Long id) {
+    String sql = "SELECT * FROM t_student WHERE id = ?";
+    List<Student> list = JdbcTemplate.query(sql, new StudentRowMapper(), id);
+    return list.size() > 0?list.get(0):null;
+}
+
+public List<Student> list() {
+    String sql = "SELECT * FROM t_student";
+    return JdbcTemplate.query(sql, new StudentRowMapper(), id);
+}
+
+class StudentRowMapper implements IRowMapper {
+    public List mapping(ResultSet rs) throws Exception {
+        List<Student> list = new ArrayList<>();
+        while (rs.next()) {
+            long id = rs.getLong("id");
+            String name = rs.getString("name");
+        }
     }
 }
 ```
 
-再创建Oracle支持的逻辑：
+好了，基本已经大功告成了，但是DQL查询不单单只有查询学生信息（List类型），还可以查询学生数量，这时就要通过泛型来完成
 
 ```java
-public class OracleConnection extends DBConnection {
-    @Override
-    public String getConnection() {
-        return "Oracle 数据库连接";
+public interface IRowMapper<T> {
+    // 处理结果集
+    T mapping(ResultSet rs) throws Exception;
+}
+```
+
+```java
+public static <T> T query(String sql, IRowMapper<T> rsh, Object...params) {
+    Connection conn = null;
+    PrepareStatement ps = null;
+    ResultSet rs = null;
+    try {
+        conn = JdbcUtil.getConnection();
+        ps = conn.prepateStatement(sql);
+        // 设置值
+        for (int i = 0; i < params.length; i ++) {
+            ps.setObject(i+1, params[i]);
+        }
+        rs = ps.executeQuery();
+        return rsh.mapping(rs);
+    } finally {
+        JdbcUtils.close(rs, ps, conn);
+    }
+    return null;
+}
+```
+
+StudentRowMapper类
+
+```java
+class StudentRowMapper implements IRowMapper<List<Student>> {
+    public List<Student> list = new ArrayList<>();
+    while (rs.next()) {
+        long id = rs.getLong("id");
+        String name = rs.getStrng("name");
+        int age = rs.getInt("age");
+        Student stu = new Student(id, name, age);
+        list.add(stu);
     }
 }
 ```
 
-具体选择交给应用层，来看一下类图：
+这样不仅可以查询List, 还可以查询学生数量：
 
+```java
+public Long getCount() {
+    String sql = "SELECT COUNT(*) total FROM t_student";
+    Long totalCount = (Long) JdbcTemplate.query(sql, new IRowMapper<Long>() {
+        public Long mapping(ResultSet rs) throws Exception {
+            Long totalCount = null;
+            if (rs.next()) {
+                totalCount = rs.getLong("total");
+            }
+            return totalCount;
+        }
+    });
+    return totalCount;
+}
+```
 
+好了， 重构设计已经完成，好的代码能让我们以后维护更方便，因此学会对代码的重构是非常重要的。
 
+**经典框架都在用设计模式解决问题**
 
+Spring就是一个把设计模式用得淋漓尽致的经典框架，其实从类的命名就能看出来，我来一一列举：
 
-### 设计原则总结
+| 设计模式名称 | 举例                  |
+| ------------ | --------------------- |
+| 工厂模式     | BeanFactory           |
+| 装饰器模式   | BeanWrapper           |
+| 代理模式     | AopProxy              |
+| 委派模式     | DispatcherServlet     |
+| 策略模式     | HandlerMapping        |
+| 适配器模式   | HandlerAdapter        |
+| 模板模式     | JdbTemplate           |
+| 观察者模式   | ContextLoaderListener |
+|              |                       |
 
-学习设计原则，学习设计模式的基础。在实际开发过程中，并不是一定要求所有代码都遵循设计原则，我们要考虑人力、时间、成本、质量，不是刻意追求完美，要在适当的场景遵循设计原则，体现的是一种平衡取舍，帮助我们设计出更加优雅的代码结构。
+需要特别声明的是，设计模式从来都不是单个设计模式独立使用的。在实际应用中，通常是多个设计模式混合使用，你中有我， 我中有你。我们会围绕Spring的IOC、APO、MVC、JDBC这样的思路展开，根据其设计类型来设计讲解顺序：
 
-
-
-
+| 类型       | 名称       | 英文              |
+| ---------- | ---------- | ----------------- |
+| 创建型模式 | 工厂模式   | Factory Pattern   |
+|            | 单例模式   | Singleton Pattern |
+|            | 原型模式   | Prototype Pattern |
+| 结构型模式 | 适配器模式 | Adapter Pattern   |
+|            | 装饰器模式 | Decorator Pattern |
+|            | 代理模式   | proxy Pattern     |
+| 行为性模式 | 策略模式   | Strategy Pattern  |
+|            | 模板模式   | Template Pattern  |
+|            | 策略模式   | Delegate Pattern  |
+|            | 观察者模式 | Observer Pattern  |
 
