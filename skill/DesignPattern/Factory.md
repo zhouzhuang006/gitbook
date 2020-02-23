@@ -1,12 +1,16 @@
-# 创建型模式
+# 工厂模式
 
 ### 工厂模式的历史由来
 
 在现实生活中我们都知道，原始社会自给自足（没有工厂）、农耕社会小作坊（简单工厂，民间酒坊）、工业革命流水线（工厂方法，自产自销）、现代产业链代工厂（抽象工厂，富士康）
 
+![image-20200223164030605](image-20200223164030605.png)
 
+**原始社会自给自足      农耕社会小作坊**
 
+![image-20200223164104994](image-20200223164104994.png)
 
+**工厂流水线生产    现代产业链代工厂**
 
 我们的项目代码同样也是由简而繁一步一步迭代而来，但对于调用者来说确是越来越简单化。
 
@@ -81,7 +85,7 @@ public class SimpleFactoryTest {
 
 当然，我们为了调用方便，可将factory的create()改为静态方法，下面来看一下类图：
 
-
+![image-20200223164355074](image-20200223164355074.png)
 
 客户端调用是简单了，但如果我们业务继续扩展，要增加前端课程，那么工厂中的create()就要根据产品链的丰富每次都要修改代码逻辑。不符合开闭原则。因此，我们对简单工厂还可以继续优化，可以采用反射技术：
 
@@ -137,7 +141,7 @@ public static void main(String[] args) {
 
 再看一下类图：
 
-
+![image-20200223164549514](image-20200223164549514.png)
 
 简单工厂模式在JDK源码也是无处不在，现在我们来举个例子，例如Calendar类，看Calendar.getInstance()方法，下面打开的是Calendar的具体创建类：
 
@@ -148,7 +152,7 @@ private static Calendar createCalendar(TimeZone zone, Locale aLocale) {
         try {
             return provider.getInstance(zone, aLocale)
         } catch (IllegalArgumentException e) {
-            
+            // fall back to the default instantiation
         }
     }
     Calendar cal = null;
@@ -170,6 +174,12 @@ private static Calendar createCalendar(TimeZone zone, Locale aLocale) {
         }
     }
     if (cal == null) {
+        // If no known calendar type is explicitly specified, 
+        // perform the traditional way to create a Calendar: 
+        // create a BuddhistCalendar for th_TH locale, 
+        // a JapaneseImperialCalendar for ja_JP_JP locale, or 
+        // a GregorianCalendar for any other locales. 
+        // NOTE: The language, country and variant strings are interned.
         if (aLocale.getLanguage() == "th" && aLocale.getCountry() == "TH") {
             cal = new BuddhisCalendar(zone, aLocale);
         } else if (aLocale.getVariant() == "JP" && aLocale.getLanguage() == "ja" && aLocale.getCountry() == "JP") {
@@ -199,7 +209,7 @@ public static Logger getLogger(Class clazz) {
 
 ### 工厂方法模式
 
-工厂方法模式是指定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类，工厂方法让类的实例推迟到子类中进行。在工厂方法模式中用户只需要关心所需产品对应的工厂，无须关心创建细节，而且加入新的产品符合开闭原则。
+工厂方法模式（Fatory Method Pattern）是指定义一个创建对象的接口，但让实现这个接口的类来决定实例化哪个类，工厂方法让类的实例推迟到子类中进行。在工厂方法模式中用户只需要关心所需产品对应的工厂，无须关心创建细节，而且加入新的产品符合开闭原则。
 
 工厂方法模式主要解决产品扩展的问题，在简单工厂中，随着产品链的丰富，如果每个课程的创建逻辑有区别的话，工厂的职责会变得越来越多，有点像万能工厂，并不便于维护。根据单一职责原则我们将职能继续拆分，专人干专事。Java课程由Java工厂创建，Python 课程由Python工厂创建，对工厂本身也做一个抽象。来看代码，先创建ICourseFactory 接口：
 
@@ -250,9 +260,13 @@ public static void main(String[] args) {
 
 现在再来看一下类图：
 
-
+![image-20200223164857154](image-20200223164857154.png)
 
 再来看看logback中工厂方法模式的应用，看看类图就OK了：
+
+![image-20200223164918141](image-20200223164918141.png)
+
+![image-20200223164933501](image-20200223164933501.png)
 
 
 
@@ -269,17 +283,19 @@ public static void main(String[] args) {
 
 ### 抽象工厂模式
 
-抽象工厂模式是指提供一个创建一系列相关或互相依赖对象的接口，无须指定他们具体的类。客户端不依赖于产品类实例如何被创建、实现等细节。强调的是一系列相关的产品对象一起使用创建对象需要大量重复的代码。需要提供一个产品类的库，所有的产品以同样的接口出现，从而使客户端不依赖具体实现。
+抽象工厂模式（Abastract Factory Pattern）是指提供一个创建一系列相关或互相依赖对象的接口，无须指定他们具体的类。客户端（应用层）不依赖于产品类实例如何被创建、实现等细节。强调的是一系列相关的产品对象（属于同一产品族）一起使用创建对象需要大量重复的代码。需要提供一个产品类的库，所有的产品以同样的接口出现，从而使客户端不依赖具体实现。
 
 讲解抽象工厂之前，我们要了解两个概念产品等级结构和产品族，看下面的图：
 
-
+![image-20200223165123331](image-20200223165123331.png)
 
 从上图中看出有正方形，圆形和菱形三种图形，相同颜色深浅就代表同一个产品族，相同形状的代表同一个
 
 产品等级结构。同样可以从生活中来举例，比如，美的电器生产多种家用电器。那么上图中，颜色最深的正方形就代表美的洗衣机、颜色最深的圆形代表美的空调、颜色最深的菱形代表美的热水器，颜色最深的一排都属于美的品牌，都是美的电器这个产品族。再看最右侧的菱形，颜色最深的我们指定了代表美的热水器，那么第二排颜色稍微浅一点的菱形，代表海信的热水器。同理，同一产品结构下还有格力热水器，格力空调，格力洗衣机。
 
 再看下面的这张图，最左侧的小房子我们就认为具体的工厂，有美的工厂，有海信工厂，有格力工厂。每个品牌的工厂都生产洗衣机、热水器和空调。
+
+![image-20200223165155547](image-20200223165155547.png)
 
 通过上面两张图的对比理解，相信大家对抽象工厂有了非常形象的理解。接下来我们来看一个具体的业务场景而且用代码来实现。还是以课程为例，咕咆学院第三期课程有了新的标准，每个课程不仅要提供课程的录播视频，而且还要提供老师的课堂笔记。相当于现在的业务变更为同一个课程不单纯是一个课程信息，要同时包含录播视频、课堂笔记甚至还要提供源码才能构成一个完整的课程。在产品等级中增加两个产品IVideo录播视频和INote课堂笔记。
 
@@ -394,7 +410,7 @@ public static void main(String[] args) {
 
 但在实际应用中，我们千万不能犯强迫症甚至有洁癖。在实际需求中产品等级结构升级是非常正常的一件事情。我们可以根据实际情况，只要不是频繁升级，可以不遵循开闭原则。代码每半年升级一次或者每年升级一次又有何不可呢？
 
-利用工厂模式重构的实践案例
+### 利用工厂模式重构的实践案例
 
 还是演示课堂开始的JDBC操作案例，我们每次操作是不是都需要重新创建数据库连接，每次创建其实都非常耗费性能，消耗业务调用时间。我们利用工厂模式，将数据库连接预先创建好放到容器中缓存着，在业务调用时就只需要现取现用。接下来我们来看这段代码：
 
@@ -480,23 +496,232 @@ public abstract class Pool {
 
 DBConnectionPool 数据库连接池：
 
-```
+```java
+package org.jdbc.sqlhelper;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.sql.*;
+import java.util.*;
+import java.util.Date;
+
+
+/**
+ * 数据库链接池管理类
+ *
+ * @author Tom
+ *
+ */
+public final class DBConnectionPool extends Pool {
+	private int checkedOut; //正在使用的连接数
+	/**
+	 * 存放产生的连接对象容器
+	 */
+	private Vector<Connection> freeConnections = new Vector<Connection>(); //存放产生的连接对象容器
+
+	private String passWord = null; // 密码
+
+	private String url = null; // 连接字符串
+
+	private String userName = null; // 用户名
+
+	private static int num = 0;// 空闲连接数
+
+	private static int numActive = 0;// 当前可用的连接数
+
+	private static DBConnectionPool pool = null;// 连接池实例变量
+
+	/**
+	 * 产生数据连接池
+	 * @return
+	 */
+	public static synchronized DBConnectionPool getInstance()
+	{
+		if(pool == null)
+		{
+			pool = new DBConnectionPool();
+		}
+		return pool;
+	}
+
+	/**
+	 * 获得一个 数据库连接池的实例
+	 */
+	private DBConnectionPool() {
+		try
+		{
+			init();
+			for (int i = 0; i < normalConnect; i++) { // 初始normalConn个连接
+				Connection c = newConnection();
+				if (c != null) {
+					freeConnections.addElement(c); //往容器中添加一个连接对象
+					num++; //记录总连接数
+				}
+			}
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+	/**
+	 * 初始化
+	 * @throws IOException
+	 *
+	 */
+	private void init() throws IOException
+	{
+		InputStream is = DBConnectionPool.class.getResourceAsStream(propertiesName);
+		Properties p = new Properties();
+		p.load(is);
+		this.userName = p.getProperty("userName");
+		this.passWord = p.getProperty("passWord");
+		this.driverName = p.getProperty("driverName");
+		this.url = p.getProperty("url");
+		this.driverName = p.getProperty("driverName");
+		this.maxConnect = Integer.parseInt(p.getProperty("maxConnect"));
+		this.normalConnect = Integer.parseInt(p.getProperty("normalConnect"));
+	}
+
+	/**
+	 * 如果不再使用某个连接对象时,可调此方法将该对象释放到连接池
+	 *
+	 * @param con
+	 */
+	public synchronized void freeConnection(Connection con) {
+		freeConnections.addElement(con);
+		num++;
+		checkedOut--;
+		numActive--;
+		notifyAll(); //解锁
+	}
+
+	/**
+	 * 创建一个新连接
+	 *
+	 * @return
+	 */
+	private Connection newConnection() {
+		Connection con = null;
+		try {
+			if (userName == null) { // 用户,密码都为空
+				con = DriverManager.getConnection(url);
+			} else {
+				con = DriverManager.getConnection(url, userName, passWord);
+			}
+			System.out.println("连接池创建一个新的连接");
+		} catch (SQLException e) {
+			System.out.println("无法创建这个URL的连接" + url);
+			return null;
+		}
+		return con;
+	}
+
+	/**
+	 * 返回当前空闲连接数
+	 *
+	 * @return
+	 */
+	public int getnum() {
+		return num;
+	}
+
+	/**
+	 * 返回当前连接数
+	 *
+	 * @return
+	 */
+	public int getnumActive() {
+		return numActive;
+	}
+
+	/**
+	 * (单例模式)获取一个可用连接
+	 *
+	 * @return
+	 */
+	public synchronized Connection getConnection() {
+		Connection con = null;
+		if (freeConnections.size() > 0) { // 还有空闲的连接
+			num--;
+			con = (Connection) freeConnections.firstElement();
+			freeConnections.removeElementAt(0);
+			try {
+				if (con.isClosed()) {
+					System.out.println("从连接池删除一个无效连接");
+					con = getConnection();
+				}
+			} catch (SQLException e) {
+				System.out.println("从连接池删除一个无效连接");
+				con = getConnection();
+			}
+		} else if (maxConnect == 0 || checkedOut < maxConnect) { // 没有空闲连接且当前连接小于最大允许值,最大值为0则不限制
+			con = newConnection();
+		}
+		if (con != null) { // 当前连接数加1
+			checkedOut++;
+		}
+		numActive++;
+		return con;
+	}
+
+	/**
+	 * 获取一个连接,并加上等待时间限制,时间为毫秒
+	 *
+	 * @param timeout  接受等待时间(以毫秒为单位)
+	 * @return
+	 */
+	public synchronized Connection getConnection(long timeout) {
+		long startTime = new Date().getTime();
+		Connection con;
+		while ((con = getConnection()) == null) {
+			try {
+				wait(timeout); //线程等待
+			} catch (InterruptedException e) {
+			}
+			if ((new Date().getTime() - startTime) >= timeout) {
+				return null; // 如果超时,则返回
+			}
+		}
+		return con;
+	}
+
+	/**
+	 * 关闭所有连接
+	 */
+	public synchronized void release() {
+		try {
+			//将当前连接赋值到 枚举中
+			Enumeration allConnections = freeConnections.elements();
+			//使用循环关闭所用连接
+			while (allConnections.hasMoreElements()) {
+				//如果此枚举对象至少还有一个可提供的元素，则返回此枚举的下一个元素
+				Connection con = (Connection) allConnections.nextElement();
+				try {
+					con.close();
+					num--;
+				} catch (SQLException e) {
+					System.out.println("无法关闭连接池中的连接");
+				}
+			}
+			freeConnections.removeAllElements();
+			numActive = 0;
+		} finally {
+			super.release();
+		}
+	}
+
+	/**
+	 * 建立连接池
+	 */
+	public void createPool() {
+
+		pool = new DBConnectionPool();
+		if (pool != null) {
+			System.out.println("创建连接池成功");
+		} else {
+			System.out.println("创建连接池失败");
+		}
+	}
+}
 
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-# 为什么要有设计模式
+# 设计模式
 
 不用设计模式并非不可以，但是用好设计模式能帮助我们更好地解决实际问题，设计模式最重要的是解耦。设计模式天天都在用，但自己却无感知。我们把设计模式作为一个专题，主要是学习设计模式是如何总结经验的，把经验为自己所用。学设计模式也是锻炼将业务需求转换技术实现的一种非常有效的方式。
 
@@ -99,17 +99,38 @@ public void setCurFom(Gw_exammingFrom curForm, String paramters) throws BaseExce
 
 ```java
 public class Exampaper extends Gw_exmamingFrom {
-    private String examinationPaperId; // 试卷主键
-    ...
+    private String examinationPaperId;//试卷主键
+    private String leavTime;//剩余时间 
+    private String organizationId;//单位主键 
+    private String id;//考试主键 
+    private String examRoomId;//考场主键 
+    private String userId;//用户主键 
+    private String specialtyCode;//专业代码 
+    private String postionCode;//报考岗位 
+    private String gradeCode;//报考等级 
+    private String examStartTime;//考试开始时间 
+    private String examEndTime;//考试结束时间 
+    private String singleSelectionImpCount;//单选选题重要数量 
+    private String multiSelectionImpCount;//多选题重要数量 
+    private String judgementImpCount;//判断题重要数量 
+    private String examTime;//考试时长 
+    private String fullScore;//总分 
+    private String passScore;//及格分 
+    private String userName;//学员姓名 
+    private String score;//考试得分 
+    private String resut;//是否及格 
+    private String singleOkCount;//单选题答对数量 
+    private String multiOkCount;//多选题答对数量 
+    private String judgementOkCount;//判断题答对数量
+}
        
-    public void setCurFrompublic void setFrom(Gw_exammingForm curForm, String paramters) throws BaseException {
-        try {
-            JSONObject jsonObj = new JSONObject(parameters);
-            ExamPaper examPaper = JSONObject.parseObject(parameters, ExamPaper.class);
-            curFrom = examPaper;
-        } catch (Exception e) {
-            e.printStrackTrace();
-        }
+public void setCurFrom(Gw_exammingForm curForm, String paramters) throws BaseException {
+    try {
+        JSONObject jsonObj = new JSONObject(parameters);
+        ExamPaper examPaper = JSONObject.parseObject(parameters, ExamPaper.class);
+        curFrom = examPaper;
+    } catch (Exception e) {
+        e.printStrackTrace();
     }
 }
 ```
@@ -166,8 +187,7 @@ public void delete(Long id) {
         conn = DriverManager.getConnection("jdbc:mysql:///jdbcdemo", "root", "root");
         // 3. 创建语句对象
         PreparedStatement ps = conn.prepareStatement(sql);
-        ps.setObject(1, stu.getName());
-        ps.setObject(2, stu.getAge());
+        ps.setObject(1,id);
         // 4. 执行SQL语句
         ps.executeUpdate();
         // 5. 释放资源
@@ -188,6 +208,42 @@ public void delete(Long id) {
             }
         }
     }
+}
+// 修改学生信息 
+public void update(Student stu){ 
+    String sql="UPDATE t_student SET name=?,age=? WHERE id=?"; 
+    Connection conn=null; 
+    Statement st=null; 
+    try{
+        // 1. 加载注册驱动 
+        Class.forName("com.mysql.jdbc.Driver"); 
+        // 2. 获取数据库连接   
+        conn=DriverManager.getConnection("jdbc:mysql:///jdbcdemo","root","root"); 
+        // 3. 创建语句对象 
+        PreparedStatement ps=conn.prepareStatement(sql); 
+        ps.setObject(1,stu.getName()); 
+        ps.setObject(2,stu.getAge()); 
+        ps.setObject(3,stu.getId()); 
+        // 4. 执行 SQL 语句 
+        ps.executeUpdate(); 
+        // 5. 释放资源
+        } catch(Exception e) { 
+        	e.printStackTrace(); 
+    	}finally{ 
+        	try{
+                if(st!=null) 
+                    st.close(); 
+            }catch(SQLException e){ 
+                e.printStackTrace(); 
+            }finally{ 
+                try{
+                    if(conn!=null) 
+                        conn.close(); 
+                }catch(SQLException e){ 
+                    e.printStackTrace(); 
+                } 
+            } 
+    } 
 }
 ```
 
@@ -262,19 +318,7 @@ public void save(Student stu) {
     } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            try {
-                if (st != null)
-                    st.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            } finally {
-                try {
-                    if (conn != null)
-                        conn.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
+            JDBCUtil.close(null, ps, conn);
         }
 }
 
@@ -293,23 +337,34 @@ public void delete(Long id) {
     } catch (SQLException e) {
         e.printStackTrace();
     } finally {
-        try {
-            if (st != null)
-                st.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                if (conn != null)
-                    conn.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
+        JDBCUtil.close(null, ps, conn);
     }
 }
+// 修改学生信息 
+public void update(Student stu){ 
+    String sql="UPDATE t_student SET name=?,age=? WHERE id=?"; 
+    Connection conn=null; 
+    Statement st=null; 
+    try{
+        // 1. 加载注册驱动 
+        Class.forName("com.mysql.jdbc.Driver"); 
+        // 2. 获取数据库连接   
+        conn=DriverManager.getConnection("jdbc:mysql:///jdbcdemo","root","root"); 
+        // 3. 创建语句对象 
+        PreparedStatement ps=conn.prepareStatement(sql); 
+        ps.setObject(1,stu.getName()); 
+        ps.setObject(2,stu.getAge()); 
+        ps.setObject(3,stu.getId()); 
+        // 4. 执行 SQL 语句 
+        ps.executeUpdate(); 
+        // 5. 释放资源
+    } catch(Exception e) { 
+        	e.printStackTrace(); 
+    } finally { 
+        	JDBCUtil.close(null, ps, conn);
+    } 
+}
 ...
-
 ```
 
 虽然完成了重复代码的抽取，但数据库中的账号密码等直接显示在代码中，不利于后期账户密码改动的维护，我们可以建立个db.propertise文件用来存储这些信息
