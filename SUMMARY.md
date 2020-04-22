@@ -109,6 +109,5 @@
     * [面试必问之JVM篇](Interview/HighFrequency/jvm.md)
     * [垃圾回收机制](Interview/HighFrequency/gc.md)
     * [SpringBoot 原理](Interview/HighFrequency/SpringBoot.md)
-  * [知识点扫盲](zhi-shi-dian-sao-mang.md)
-* Spring全家桶
+  * [知识点扫盲](Interview/zhi-shi-dian-sao-mang.md)
 
