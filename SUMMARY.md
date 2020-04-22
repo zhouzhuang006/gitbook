@@ -52,7 +52,7 @@
 * [Spring全家桶](spring/springquan-jia-tong.md)
   * [Spring Framework](skill/spring/spring-framework.md)
     * [Spring 5.2.5 中文文档](skill/spring/spring-525-zhong-wen-wen-dang.md)
-      * [Spring 概述](skill/spring/spring-gai-shu.md)
+      * [Spring 概述](spring/spring-framework/spring-5.2.5/spring-gai-shu.md)
       * [核心技术](skill/spring/core.md)
         * [Spring核心-IoC介绍](skill/spring/core/ioc/ioc-jieshao.md)
         * [Spring核心-IoC介绍](skill/spring/core/ioc/rong-qi-gai-shu.md)
