@@ -55,7 +55,7 @@
       * [Spring 概述](spring/spring-framework/spring-5.2.5/spring-gai-shu.md)
       * [核心技术](spring/spring-framework/spring-5.2.5/core.md)
         * [Spring核心-IoC介绍](spring/spring-framework/spring-5.2.5/core/ioc/ioc-jieshao.md)
-        * [Spring核心-IoC介绍](spring/spring-framework/spring-5.2.5/core/ioc/rong-qi-gai-shu.md)
+        * [Spring核心-容器概述](spring/spring-framework/spring-5.2.5/core/ioc/rong-qi-gai-shu.md)
         * [Spring核心-Bean总览](spring/spring-framework/spring-5.2.5/core/ioc/beanzong-lan.md)
         * [Spring核心-依赖关系](spring/spring-framework/spring-5.2.5/core/ioc/yi-lai-guan-xi.md)
         * [Spring核心-Bean范围](spring/spring-framework/spring-5.2.5/core/ioc/bean-fan-wei.md)
