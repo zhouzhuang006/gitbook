@@ -54,12 +54,22 @@
     * [Spring 5.2.6 中文文档](spring/spring-framework/spring-525-zhong-wen-wen-dang.md)
       * [Spring 概述](spring/spring-framework/spring-5.2.5/spring-gai-shu.md)
       * [核心技术](spring/spring-framework/spring-5.2.5/core.md)
-        * [Spring核心-IoC介绍](spring/spring-framework/spring-5.2.5/core/ioc/ioc-jieshao.md)
-        * [Spring核心-容器概述](spring/spring-framework/spring-5.2.5/core/ioc/rong-qi-gai-shu.md)
-        * [Spring核心-Bean总览](spring/spring-framework/spring-5.2.5/core/ioc/beanzong-lan.md)
-        * [Spring核心-依赖关系](spring/spring-framework/spring-5.2.5/core/ioc/yi-lai-guan-xi.md)
-        * [Spring核心-Bean范围](spring/spring-framework/spring-5.2.5/core/ioc/bean-fan-wei.md)
-        * [自定义Bean的性质](spring/spring-framework/spring-5.2.5/core/ioc/zi-ding-yi-bean-de-xing-zhi.md)
+        * [1.1 IoC介绍](spring/spring-framework/spring-5.2.5/core/ioc/ioc-jieshao.md)
+        * [1.2 容器概述](spring/spring-framework/spring-5.2.5/core/ioc/rong-qi-gai-shu.md)
+        * [1.3 Bean总览](spring/spring-framework/spring-5.2.5/core/ioc/beanzong-lan.md)
+        * [1.4 依赖关系](spring/spring-framework/spring-5.2.5/core/ioc/yi-lai-guan-xi.md)
+        * [1.5 Bean范围](spring/spring-framework/spring-5.2.5/core/ioc/bean-fan-wei.md)
+        * [1.6 自定义Bean的性质](spring/spring-framework/spring-5.2.5/core/ioc/zi-ding-yi-bean-de-xing-zhi.md)
+        * [1.7 Bean定义继承](spring/spring-framework/spring-5.2.5/core/ioc/17-beanding-yi-ji-cheng.md)
+        * [1.8 集装箱延伸点](spring/spring-framework/spring-5.2.5/core/ioc/18-ji-zhuang-xiang-yan-shen-dian.md)
+        * 1.9 基于注释的容器配置
+        * 1.10 类路径扫描和托管组件
+        * 1.11。使用JSR 330标准注释
+        * 1.12 基于Java的容器配置
+        * 1.13 环境抽象
+        * 1.14 注册一个LoadTimeWeaver
+        * 1.15 ApplicationContext的其他功能
+        * 1.16 BeanFactory
 * [分布式与高并发](highConcurrent/readme.md)
   * [并发编程从入门到放弃](highConcurrent/Introduction.md)
   * [漫谈分布式架构](highConcurrent/ramble.md)
