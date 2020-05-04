@@ -59,6 +59,7 @@
         * [Spring核心-Bean总览](spring/spring-framework/spring-5.2.5/core/ioc/beanzong-lan.md)
         * [Spring核心-依赖关系](spring/spring-framework/spring-5.2.5/core/ioc/yi-lai-guan-xi.md)
         * [Spring核心-Bean范围](spring/spring-framework/spring-5.2.5/core/ioc/bean-fan-wei.md)
+        * [自定义Bean的性质](spring/spring-framework/spring-5.2.5/core/ioc/zi-ding-yi-bean-de-xing-zhi.md)
 * [分布式与高并发](highConcurrent/readme.md)
   * [并发编程从入门到放弃](highConcurrent/Introduction.md)
   * [漫谈分布式架构](highConcurrent/ramble.md)
