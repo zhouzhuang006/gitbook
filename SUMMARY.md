@@ -51,7 +51,7 @@
     * [ActiveMQ源码分析](skill/SourceCode/ActiveMQ/readme.md)
 * [Spring全家桶](spring/springquan-jia-tong.md)
   * [Spring Framework](spring/spring-framework.md)
-    * [Spring 5.2.5 中文文档](spring/spring-framework/spring-525-zhong-wen-wen-dang.md)
+    * [Spring 5.2.6 中文文档](spring/spring-framework/spring-525-zhong-wen-wen-dang.md)
       * [Spring 概述](spring/spring-framework/spring-5.2.5/spring-gai-shu.md)
       * [核心技术](spring/spring-framework/spring-5.2.5/core.md)
         * [Spring核心-IoC介绍](spring/spring-framework/spring-5.2.5/core/ioc/ioc-jieshao.md)
