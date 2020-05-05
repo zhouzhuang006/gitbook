@@ -147,7 +147,7 @@ public class UserPreferences {
 }
 ```
 
-##### 范围豆作为依赖项
+##### 范围Bean作为依赖项
 
 Spring IoC容器不仅管理对象（bean）的实例化，而且还管理协作者（或依赖项）的连接。如果要将（例如）HTTP请求范围的Bean注入（例如）另一个作用域更长的Bean，则可以选择注入AOP代理来代替已定义范围的Bean。也就是说，您需要注入一个代理对象，该对象公开与范围对象相同的公共接口，但还可以从相关范围（例如HTTP请求）中检索实际目标对象，并将方法调用委托给该真实对象。
 
@@ -269,10 +269,6 @@ String getConversationId()
 ##### 使用自定义范围
 
 在编写和测试一个或多个自定义`Scope`实现之后，您需要使Spring容器意识到您的新作用域。以下方法是`Scope`在Spring容器中注册新方法的主要方法：
-
-爪哇
-
-科特林
 
 ```java
 void registerScope(String scopeName, Scope scope);
