@@ -8,18 +8,16 @@
 
 **Bean作用域**
 
-| 范围                  | 描述                                     |
-| :------------------- | :--------------------------------------- |
-| [单例](https://docs.spring.io/spring/docs/5.2.5.RELEASE/spring-framework-reference/core.html#beans-factory-scopes-singleton)      | （默认值）将每个Spring IoC容器的单个bean定义范围限定为单个对象实例。 |
-| [原型](https://docs.spring.io/spring/docs/5.2.5.RELEASE/spring-framework-reference/core.html#beans-factory-scopes-prototype) | 将单个bean定义的作用域限定为任意数量的对象实例。             |
+| 范围 | 描述 |
+| :--- | :--- |
+| [单例](https://docs.spring.io/spring/docs/5.2.5.RELEASE/spring-framework-reference/core.html#beans-factory-scopes-singleton) | （默认值）将每个Spring IoC容器的单个bean定义范围限定为单个对象实例。 |
+| [原型](https://docs.spring.io/spring/docs/5.2.5.RELEASE/spring-framework-reference/core.html#beans-factory-scopes-prototype) | 将单个bean定义的作用域限定为任意数量的对象实例。 |
 | [请求](https://docs.spring.io/spring/docs/5.2.5.RELEASE/spring-framework-reference/core.html#beans-factory-scopes-request) | 将单个bean定义的范围限定为单个HTTP请求的生命周期。也就是说，每个HTTP请求都有一个在单个bean定义后面创建的bean实例。仅在可感知网络的Spring上下文中有效`ApplicationContext`。 |
 | [会议](https://docs.spring.io/spring/docs/5.2.5.RELEASE/spring-framework-reference/core.html#beans-factory-scopes-session) | 将单个bean定义的范围限定为HTTP的生命周期`Session`。仅在可感知网络的Spring上下文中有效`ApplicationContext`。 |
 | [应用](https://docs.spring.io/spring/docs/5.2.5.RELEASE/spring-framework-reference/core.html#beans-factory-scopes-application) | 将单个bean定义的作用域限定为的生命周期`ServletContext`。仅在可感知网络的Spring上下文中有效`ApplicationContext`。 |
 | [网络套接字](https://docs.spring.io/spring/docs/5.2.5.RELEASE/spring-framework-reference/web.html#websocket-stomp-websocket-scope) | 将单个bean定义的作用域限定为的生命周期`WebSocket`。仅在可感知网络的Spring上下文中有效`ApplicationContext`。 |
 
 > 从Spring 3.0开始，线程作用域可用，但默认情况下未注册。有关更多信息，请参见的文档 SimpleThreadScope。有关如何注册此自定义范围或任何其他自定义范围的说明，请参阅 使用自定义范围。
-
- 
 
 ### 1.5.1 单例范围
 
@@ -75,8 +73,6 @@ Spring的singleton bean的概念不同于“四人帮（Gang of Four，GoF）模
 如何完成此初始设置取决于您的特定Servlet环境。
 
 如果您在Spring Web MVC中访问作用域化的bean，实际上是在Spring处理的请求中，则`DispatcherServlet`不需要特殊的设置。`DispatcherServlet`已经公开了所有相关状态。
-
-
 
 如果您使用Servlet 2.5 Web容器，并且在Spring之外处理请求`DispatcherServlet`（例如，使用JSF或Struts时），则需要注册`org.springframework.web.context.request.RequestContextListener  ServletRequestListener`。对于Servlet 3.0+，可以使用该`WebApplicationInitializer`接口以编程方式完成此操作。或者，或者对于较旧的容器，将以下声明添加到Web应用程序的`web.xml`文件中：
 
@@ -151,8 +147,6 @@ public class UserPreferences {
 }
 ```
 
-
-
 ##### 范围豆作为依赖项
 
 Spring IoC容器不仅管理对象（bean）的实例化，而且还管理协作者（或依赖项）的连接。如果要将（例如）HTTP请求范围的Bean注入（例如）另一个作用域更长的Bean，则可以选择注入AOP代理来代替已定义范围的Bean。也就是说，您需要注入一个代理对象，该对象公开与范围对象相同的公共接口，但还可以从相关范围（例如HTTP请求）中检索实际目标对象，并将方法调用委托给该真实对象。
@@ -215,11 +209,11 @@ Spring IoC容器不仅管理对象（bean）的实例化，而且还管理协作
 
 ###### 选择要创建的代理类型
 
-默认情况下，当Spring容器为使用``元素标记的bean创建代理时，将创建基于CGLIB的类代理。
+默认情况下，当Spring容器为使用\`\`元素标记的bean创建代理时，将创建基于CGLIB的类代理。
 
 > CGLIB代理仅拦截公共方法调用！不要在此类代理上调用非公共方法。它们没有被委派给实际的作用域目标对象。
 
-另外，您可以通过指定元素`false`的`proxy-target-class`属性值，将Spring容器配置为为此类作用域的Bean创建基于标准JDK接口的代理``。使用基于JDK接口的代理意味着您不需要应用程序类路径中的其他库即可影响此类代理。但是，这也意味着作用域Bean的类必须实现至少一个接口，并且作用域Bean注入到其中的所有协作者必须通过其接口之一引用该Bean。以下示例显示基于接口的代理：
+另外，您可以通过指定元素`false`的`proxy-target-class`属性值，将Spring容器配置为为此类作用域的Bean创建基于标准JDK接口的代理\`\`。使用基于JDK接口的代理意味着您不需要应用程序类路径中的其他库即可影响此类代理。但是，这也意味着作用域Bean的类必须实现至少一个接口，并且作用域Bean注入到其中的所有协作者必须通过其接口之一引用该Bean。以下示例显示基于接口的代理：
 
 ```xml
 <!-- DefaultUserPreferences implements the UserPreferences interface -->
@@ -234,7 +228,7 @@ Spring IoC容器不仅管理对象（bean）的实例化，而且还管理协作
 
 有关选择基于类或基于接口的代理的更多详细信息，请参阅[代理机制](https://docs.spring.io/spring/docs/5.2.6.RELEASE/spring-framework-reference/core.html#aop-proxying)。
 
-#### 1.5.5。自定义范围
+#### 1.5.5 自定义范围
 
 Bean作用域机制是可扩展的。您可以定义自己的作用域，甚至重新定义现有作用域，尽管后者被认为是不好的做法，并且您不能覆盖内置作用域`singleton`和`prototype`作用域。
 
@@ -338,4 +332,6 @@ beanFactory.registerScope("thread", threadScope);
 ```
 
 > 当您放置在`FactoryBean`实现中时，作用域是工厂Bean本身，而不是从中返回的对象`getObject()`。
+
+
 
