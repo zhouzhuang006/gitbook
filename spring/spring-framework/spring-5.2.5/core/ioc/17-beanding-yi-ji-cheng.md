@@ -1,7 +1,5 @@
 ### 1.7 Bean定义继承 {#beans-child-bean-definitions}
 
-
-
 Bean定义可以包含许多配置信息，包括构造函数参数，属性值和特定于容器的信息，例如初始化方法，静态工厂方法名称等。子bean定义从父定义继承配置数据。子定义可以覆盖某些值或根据需要添加其他值。使用父bean和子bean定义可以节省很多输入。实际上，这是一种模板形式。
 
 如果您以`ApplicationContext`编程方式使用接口，则子bean定义由`ChildBeanDefinition`类表示。大多数用户不在此级别上与他们合作。相反，它们在诸如之类的类中声明性地配置Bean定义`ClassPathXmlApplicationContext`。当使用基于XML的配置元数据时，可以通过使用`parent`属性来指定子bean定义，并将父bean指定为该属性的值。以下示例显示了如何执行此操作：
