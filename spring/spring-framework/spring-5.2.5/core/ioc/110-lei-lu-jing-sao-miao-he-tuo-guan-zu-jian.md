@@ -298,9 +298,7 @@ public class AppConfig {
 
 一般而言，与Spring管理的组件一样，自动检测到的组件的默认范围也是最常见的范围是`singleton`。但是，有时您需要`@Scope`注释可以指定的其他范围。您可以在批注中提供范围的名称，如以下示例所示：
 
-爪哇
 
-科特林
 
 ```java
 @Scope("prototype")

@@ -10,7 +10,7 @@
 - 事件发布，即`ApplicationListener`通过使用接口向实现接口的bean `ApplicationEventPublisher`。
 - 加载多个（分层）上下文，使每个上下文都通过`HierarchicalBeanFactory`界面集中在一个特定的层上，例如应用程序的Web层 。
 
-#### 1.15.1。国际化使用`MessageSource`
+#### 1.15.1 国际化使用`MessageSource`
 
 该`ApplicationContext`接口扩展了称为的接口`MessageSource`，因此提供了国际化（“ i18n”）功能。Spring还提供了 `HierarchicalMessageSource`接口，该接口可以分层解析消息。这些接口一起提供了Spring影响消息解析的基础。这些接口上定义的方法包括：
 
@@ -48,9 +48,7 @@ Spring提供了两种`MessageSource`实现，`ResourceBundleMessageSource`和 `S
 
 下一个示例显示了执行该`MessageSource`功能的程序。请记住，所有`ApplicationContext`实现也是`MessageSource` 实现，因此可以强制转换为`MessageSource`接口。
 
-爪哇
 
-科特林
 
 ```java
 public static void main(String[] args) {
@@ -86,9 +84,7 @@ public static void main(String[] args) {
 </beans>
 ```
 
-爪哇
 
-科特林
 
 ```java
 public class Example {
@@ -122,9 +118,7 @@ userDao参数是必需的。
 parameter.required = Ebagum lad中，“ {0}”自变量是必需的，我说是必需的。
 ```
 
-爪哇
 
-科特林
 
 ```java
 public static void main(final String[] args) {
@@ -147,7 +141,7 @@ Ebagum伙计，“ userDao”参数是必需的，我说是必需的。
 | ---- | ------------------------------------------------------------ |
 |      |                                                              |
 
-#### 1.15.2。标准和自定义事件
+#### 1.15.2 标准和自定义事件
 
 `ApplicationContext`通过`ApplicationEvent` 类和`ApplicationListener`接口提供中的事件处理。如果将实现`ApplicationListener`接口的Bean 部署到上下文中，则每次 将Bean `ApplicationEvent`发布到时`ApplicationContext`，都会通知该Bean。本质上，这是标准的观察者设计模式。
 
@@ -168,9 +162,7 @@ Ebagum伙计，“ userDao”参数是必需的，我说是必需的。
 
 您还可以创建和发布自己的自定义事件。以下示例显示了一个简单的类，该类扩展了Spring的`ApplicationEvent`基类：
 
-爪哇
 
-科特林
 
 ```java
 public class BlackListEvent extends ApplicationEvent {
@@ -190,9 +182,7 @@ public class BlackListEvent extends ApplicationEvent {
 
 要发布自定义`ApplicationEvent`，请在`publishEvent()`上调用方法 `ApplicationEventPublisher`。通常，这是通过创建一个实现`ApplicationEventPublisherAware`并注册为Spring bean 的类来完成的 。以下示例显示了此类：
 
-爪哇
 
-科特林
 
 ```java
 public class EmailService implements ApplicationEventPublisherAware {
@@ -222,9 +212,7 @@ public class EmailService implements ApplicationEventPublisherAware {
 
 要接收该定制`ApplicationEvent`，您可以创建一个实现 `ApplicationListener`并注册为Spring bean的类。以下示例显示了此类：
 
-爪哇
 
-科特林
 
 ```java
 public class BlackListNotifier implements ApplicationListener<BlackListEvent> {
@@ -271,9 +259,7 @@ public class BlackListNotifier implements ApplicationListener<BlackListEvent> {
 
 从Spring 4.2开始，您可以使用`@EventListener`注释在托管Bean的任何公共方法上注册事件侦听器。该`BlackListNotifier`可改写如下：
 
-爪哇
 
-科特林
 
 ```java
 public class BlackListNotifier {
@@ -295,9 +281,7 @@ public class BlackListNotifier {
 
 如果您的方法应该侦听多个事件，或者您要完全不使用任何参数来定义它，则事件类型也可以在注释本身上指定。以下示例显示了如何执行此操作：
 
-爪哇
 
-科特林
 
 ```java
 @EventListener({ContextStartedEvent.class, ContextRefreshedEvent.class})
@@ -310,9 +294,7 @@ public void handleContextStart() {
 
 以下示例说明了仅当`content`事件的属性等于时，才可以重写我们的通知程序以进行调用 `my-event`：
 
-爪哇
 
-科特林
 
 ```java
 @EventListener(condition = "#blEvent.content == 'my-event'")
@@ -333,9 +315,7 @@ public void processBlackListEvent(BlackListEvent blEvent) {
 
 如果由于处理另一个事件而需要发布一个事件，则可以更改方法签名以返回应发布的事件，如以下示例所示：
 
-爪哇
 
-科特林
 
 ```java
 @EventListener
@@ -355,9 +335,7 @@ public ListUpdateEvent handleBlackListEvent(BlackListEvent event) {
 
 如果您希望特定的侦听器异步处理事件，则可以重用 [常规`@Async`支持](https://docs.spring.io/spring/docs/5.2.6.RELEASE/spring-framework-reference/integration.html#scheduling-annotation-support-async)。以下示例显示了如何执行此操作：
 
-爪哇
 
-科特林
 
 ```java
 @EventListener
@@ -376,9 +354,7 @@ public void processBlackListEvent(BlackListEvent event) {
 
 如果需要先调用一个侦听器，则可以将`@Order` 注释添加到方法声明中，如以下示例所示：
 
-爪哇
 
-科特林
 
 ```java
 @EventListener
@@ -392,9 +368,7 @@ public void processBlackListEvent(BlackListEvent event) {
 
 您还可以使用泛型来进一步定义事件的结构。考虑使用 `EntityCreatedEvent`where `T`是创建的实际实体的类型。例如，您可以创建以下侦听器定义只接收`EntityCreatedEvent`了 `Person`：
 
-爪哇
 
-科特林
 
 ```java
 @EventListener
@@ -407,9 +381,7 @@ public void onPersonCreated(EntityCreatedEvent<Person> event) {
 
 在某些情况下，如果所有事件都遵循相同的结构，这可能会变得很乏味（就像前面示例中的事件一样）。在这种情况下，您可以实现`ResolvableTypeProvider`超出运行时环境提供的范围之外的框架指导。以下事件显示了如何执行此操作：
 
-爪哇
 
-科特林
 
 ```java
 public class EntityCreatedEvent<T> extends ApplicationEvent implements ResolvableTypeProvider {
@@ -429,7 +401,7 @@ public class EntityCreatedEvent<T> extends ApplicationEvent implements Resolvabl
 | ---- | ------------------------------------------------------------ |
 |      |                                                              |
 
-#### 1.15.3。方便地访问低级资源
+#### 1.15.3 方便地访问低级资源
 
 为了最佳使用和理解应用程序上下文，您应该熟悉Spring的`Resource`抽象，如[参考资料中所述](https://docs.spring.io/spring/docs/5.2.6.RELEASE/spring-framework-reference/core.html#resources)。
 
@@ -439,7 +411,7 @@ public class EntityCreatedEvent<T> extends ApplicationEvent implements Resolvabl
 
 提供给`ApplicationContext`构造函数的一个或多个位置路径实际上是资源字符串，并且根据特定的上下文实现以简单的形式对其进行了适当处理。例如，`ClassPathXmlApplicationContext`将简单的位置路径视为类路径位置。您也可以使用带有特殊前缀的位置路径（资源字符串）来强制从类路径或URL中加载定义，而不管实际的上下文类型如何。
 
-#### 1.15.4。Web应用程序的便捷ApplicationContext实例化
+#### 1.15.4 Web应用程序的便捷ApplicationContext实例化
 
 您可以`ApplicationContext`使用声明性地创建实例 `ContextLoader`。当然，您也可以`ApplicationContext`使用其中一种`ApplicationContext`实现以编程方式创建实例。
 
@@ -458,7 +430,7 @@ public class EntityCreatedEvent<T> extends ApplicationEvent implements Resolvabl
 
 侦听器检查`contextConfigLocation`参数。如果该参数不存在，那么侦听器将使用它`/WEB-INF/applicationContext.xml`作为默认值。当参数确实存在时，侦听器将`String`使用预定义的定界符（逗号，分号和空格）将分隔，并将这些值用作搜索应用程序上下文的位置。还支持蚂蚁风格的路径模式。示例是`/WEB-INF/*Context.xml`（对于名称以结尾 `Context.xml`且位于`WEB-INF`目录`/WEB-INF/**/*Context.xml` 中的所有文件）和（对于的任何子目录中的所有此类文件`WEB-INF`）。
 
-#### 1.15.5。将Spring部署`ApplicationContext`为Java EE RAR文件
+#### 1.15.5 将Spring部署`ApplicationContext`为Java EE RAR文件
 
 可以将Spring部署`ApplicationContext`为RAR文件，将上下文及其所有必需的Bean类和库JAR封装在Java EE RAR部署单元中。这等效于引导`ApplicationContext`能够访问Java EE服务器功能的独立服务器（仅托管在Java EE环境中）。对于部署无头WAR文件的情况，RAR部署是一种更自然的选择-实际上，这种WAR文件没有任何HTTP入口点，仅用于`ApplicationContext`在Java EE环境中引导Spring 。
 

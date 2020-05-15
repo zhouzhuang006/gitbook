@@ -5,9 +5,7 @@
 
 要启用加载时编织，可以将`@EnableLoadTimeWeaving`_ 添加到您的一个 `@Configuration`类，如以下示例所示：
 
-爪哇
 
-科特林
 
 ```java
 @Configuration

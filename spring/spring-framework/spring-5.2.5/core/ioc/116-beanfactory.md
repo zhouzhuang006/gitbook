@@ -6,7 +6,7 @@
 
 请注意，核心`BeanFactory`API级别及其`DefaultListableBeanFactory` 实现不对配置格式或要使用的任何组件注释进行假设。所有这些风味都通过扩展名（例如`XmlBeanDefinitionReader`和`AutowiredAnnotationBeanPostProcessor`）进入，并在共享`BeanDefinition`对象上作为核心元数据表示形式进行操作。这就是使Spring的容器如此灵活和可扩展的本质。
 
-#### 1.16.1。`BeanFactory`还是`ApplicationContext`？
+#### 1.16.1 `BeanFactory`还是`ApplicationContext`？
 
 本节说明`BeanFactory`和 `ApplicationContext`容器级别之间的区别以及对引导的影响。
 
@@ -29,9 +29,7 @@
 
 要使用显式注册Bean后处理器`DefaultListableBeanFactory`，您需要以编程方式调用`addBeanPostProcessor`，如以下示例所示：
 
-爪哇
 
-科特林
 
 ```java
 DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
@@ -46,9 +44,7 @@ factory.addBeanPostProcessor(new MyBeanPostProcessor());
 
 要将a `BeanFactoryPostProcessor`应用于平原`DefaultListableBeanFactory`，您需要调用其`postProcessBeanFactory`方法，如以下示例所示：
 
-爪哇
 
-科特林
 
 ```java
 DefaultListableBeanFactory factory = new DefaultListableBeanFactory();

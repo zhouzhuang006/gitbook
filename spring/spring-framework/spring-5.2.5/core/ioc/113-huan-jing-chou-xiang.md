@@ -6,7 +6,7 @@
 
 属性在几乎所有应用程序中都扮演着重要的角色，并且可能源自各种来源：属性文件，JVM系统属性，系统环境变量，JNDI，Servlet上下文参数，即席`Properties`对象，`Map`对象等。`Environment`对象与属性有关的角色是为用户提供方便的服务界面，用于配置属性源并从中解析属性。
 
-#### 1.13.1。Bean定义配置文件
+#### 1.13.1 Bean定义配置文件
 
 Bean定义配置文件在核心容器中提供了一种机制，该机制允许在不同环境中注册不同的Bean。“环境”一词对不同的用户可能具有不同的含义，并且此功能可以帮助解决许多用例，包括：
 
@@ -16,9 +16,7 @@ Bean定义配置文件在核心容器中提供了一种机制，该机制允许�
 
 考虑实际应用中第一个用例的需求 `DataSource`。在测试环境中，配置可能类似于以下内容：
 
-爪哇
 
-科特林
 
 ```java
 @Bean
@@ -33,9 +31,7 @@ public DataSource dataSource() {
 
 现在，假设该应用程序的数据源已在生产应用程序服务器的JNDI目录中注册，请考虑如何将该应用程序部署到QA或生产环境中。`dataSource`现在，我们的bean看起来像下面的清单：
 
-爪哇
 
-科特林
 
 ```java
 @Bean(destroyMethod="")
@@ -53,9 +49,7 @@ public DataSource dataSource() throws Exception {
 
 该[`@Profile`](https://docs.spring.io/spring-framework/docs/5.2.6.RELEASE/javadoc-api/org/springframework/context/annotation/Profile.html) 注解让你指示组件有资格登记在一个或多个指定的配置文件是活动的。使用前面的示例，我们可以`dataSource`如下重写配置：
 
-爪哇
 
-科特林
 
 ```java
 @Configuration
@@ -73,9 +67,7 @@ public class StandaloneDataConfig {
 }
 ```
 
-爪哇
 
-科特林
 
 ```java
 @Configuration
@@ -106,9 +98,7 @@ public class JndiDataConfig {
 
 您可以将其`@Profile`用作[元注释](https://docs.spring.io/spring/docs/5.2.6.RELEASE/spring-framework-reference/core.html#beans-meta-annotations)，以创建自定义的组合注释。以下示例定义了一个自定义 `@Production`批注，您可以将其用作替代品 `@Profile("production")`：
 
-爪哇
 
-科特林
 
 ```java
 @Target(ElementType.TYPE)
@@ -124,9 +114,7 @@ public @interface Production {
 
 `@Profile` 也可以在方法级别声明为仅包含配置类的一个特定bean（例如，特定bean的替代变体），如以下示例所示：
 
-爪哇
 
-科特林
 
 ```java
 @Configuration
@@ -221,9 +209,7 @@ XML对应项是元素的`profile`属性``。我们前面的示例配置可以重
 
 可以通过多种方式来激活配置文件，但是最直接的方法是针对`Environment`通过可以使用的API以 编程方式进行配置`ApplicationContext`。以下示例显示了如何执行此操作：
 
-爪哇
 
-科特林
 
 ```java
 AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
@@ -236,9 +222,7 @@ ctx.refresh();
 
 请注意，配置文件不是“非此即彼”的命题。您可以一次激活多个配置文件。通过编程，您可以为该`setActiveProfiles()`方法提供多个配置文件名称，该名称 接受`String…`varargs。以下示例激活多个配置文件：
 
-爪哇
 
-科特林
 
 ```java
 ctx.getEnvironment().setActiveProfiles("profile1", "profile2");
@@ -254,9 +238,7 @@ ctx.getEnvironment().setActiveProfiles("profile1", "profile2");
 
 默认配置文件表示默认情况下启用的配置文件。考虑以下示例：
 
-爪哇
 
-科特林
 
 ```java
 @Configuration
@@ -277,13 +259,11 @@ public class DefaultDataConfig {
 
 您可以通过更改默认的配置文件的名称`setDefaultProfiles()`上`Environment`，或者声明，通过使用`spring.profiles.default`属性。
 
-#### 1.13.2。`PropertySource`抽象化
+#### 1.13.2 `PropertySource`抽象化
 
 Spring的`Environment`抽象提供了可配置属性源层次结构上的搜索操作。考虑以下清单：
 
-爪哇
 
-科特林
 
 ```java
 ApplicationContext ctx = new GenericApplicationContext();
@@ -306,9 +286,7 @@ System.out.println("Does my environment contain the 'my-property' property? " + 
 
 最重要的是，整个机制是可配置的。也许您具有要集成到此搜索中的自定义属性源。为此，请实现并实例化自己的实例`PropertySource`并将其添加到`PropertySources`current 的集合中`Environment`。以下示例显示了如何执行此操作：
 
-爪哇
 
-科特林
 
 ```java
 ConfigurableApplicationContext ctx = new GenericApplicationContext();
@@ -318,15 +296,13 @@ sources.addFirst(new MyPropertySource());
 
 在前面的代码中，`MyPropertySource`已在搜索中添加了最高优先级。如果它包含一个`my-property`属性，则会检测到并返回该属性，从而支持`my-property`任何其他属性`PropertySource`。该 [`MutablePropertySources`](https://docs.spring.io/spring-framework/docs/5.2.6.RELEASE/javadoc-api/org/springframework/core/env/MutablePropertySources.html) API公开了许多方法，这些方法可以精确地控制属性源集。
 
-#### 1.13.3。使用`@PropertySource`
+#### 1.13.3 使用`@PropertySource`
 
 该[`@PropertySource`](https://docs.spring.io/spring-framework/docs/5.2.6.RELEASE/javadoc-api/org/springframework/context/annotation/PropertySource.html) 注解提供便利和声明的机制添加`PropertySource` 到Spring的`Environment`。
 
 给定一个`app.properties`包含键-值对的名为的文件`testbean.name=myTestBean`，以下`@Configuration`类以`@PropertySource`一种调用`testBean.getName()`return 的方式使用`myTestBean`：
 
-爪哇
 
-科特林
 
 ```java
 @Configuration
@@ -347,9 +323,7 @@ public class AppConfig {
 
 资源位置中`${…}`存在的所有占位符`@PropertySource`都是根据已经针对环境注册的一组属性源来解析的，如以下示例所示：
 
-爪哇
 
-科特林
 
 ```java
 @Configuration
@@ -374,7 +348,7 @@ public class AppConfig {
 | ---- | ------------------------------------------------------------ |
 |      |                                                              |
 
-#### 1.13.4。声明中的占位符解析
+#### 1.13.4 声明中的占位符解析
 
 从历史上看，元素中占位符的值只能根据JVM系统属性或环境变量来解析。这已不再是这种情况。由于`Environment`抽象是在整个容器中集成的，因此很容易通过它路由占位符的解析。这意味着您可以按照自己喜欢的任何方式配置解析过程。您可以更改搜索系统属性和环境变量的优先级，也可以完全删除它们。您还可以根据需要将自己的属性源添加到组合中。
 
