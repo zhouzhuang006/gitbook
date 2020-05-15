@@ -4,7 +4,7 @@ Bean定义可以包含许多配置信息，包括构造函数参数，属性值�
 
 如果您以`ApplicationContext`编程方式使用接口，则子bean定义由`ChildBeanDefinition`类表示。大多数用户不在此级别上与他们合作。相反，它们在诸如之类的类中声明性地配置Bean定义`ClassPathXmlApplicationContext`。当使用基于XML的配置元数据时，可以通过使用`parent`属性来指定子bean定义，并将父bean指定为该属性的值。以下示例显示了如何执行此操作：
 
-```xml
+```
 <bean id="inheritedTestBean" abstract="true"
         class="org.springframework.beans.TestBean">
     <property name="name" value="parent"/>
