@@ -184,6 +184,11 @@
       "adId": "41",
       "pictureUrl": "https://www.lgstatic.com/i/image/M00/14/6E/CgqCHl7QzaaAVET-AAD3SuoEep0386.jpg",
       "jumpUrl": "https://kaiwu.lagou.com/course/courseInfo.htm?courseId=243&decorateId=acd97146ec9e43e4b78173e60d37b9e5&token=4658eff97e3041309c1f799dc426439a"
+    },
+    {
+      "adId": "42",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/16/8D/Ciqc1F7V5mWAemTMAAC8QX-dvrM858.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/course/courseInfo.htm?courseId=230&decorateId=ebeb1d62941d4fab8516cebca656f6b6"
     }
   ],
   "kwCourseAdConfig": {
@@ -198,51 +203,51 @@
         ]
       },
       {
-        "key": "全国_运营|编辑|客服类_appHome_position1",
+        "key": "全国_开发|测试|运维类_appRec_position8",
         "ids": [
-          "36"
+          "42"
         ]
       },
       {
-        "key": "全国_市场|商务类_appHome_position1",
+        "key": "全国_产品|需求|项目类_appRec_position8",
         "ids": [
-          "36"
-        ]
-      },
-      {
-        "key": "全国_销售类_appHome_position1",
-        "ids": [
-          "36"
-        ]
-      },
-      {
-        "key": "全国_MCN|直播|网红_appHome_position1",
-        "ids": [
-          "36"
-        ]
-      },
-      {
-        "key": "全国_运营|编辑|客服类_appRec_position8",
-        "ids": [
-          "37"
+          "42"
         ]
       },
       {
         "key": "全国_市场|商务类_appRec_position8",
         "ids": [
-          "37"
+          "42"
         ]
       },
       {
-        "key": "全国_销售类_appRec_position8",
+        "key": "全国_综合职能|高级管理_appRec_position8",
         "ids": [
-          "37"
+          "42"
         ]
       },
       {
-        "key": "全国_MCN|直播|网红_appRec_position8",
+        "key": "全国_开发|测试|运维类_appSearch_position8",
         "ids": [
-          "37"
+          "42"
+        ]
+      },
+      {
+        "key": "全国_产品|需求|项目类_appSearch_position8",
+        "ids": [
+          "42"
+        ]
+      },
+      {
+        "key": "全国_市场|商务类_appSearch_position8",
+        "ids": [
+          "42"
+        ]
+      },
+      {
+        "key": "全国_综合职能|高级管理_appSearch_position8",
+        "ids": [
+          "42"
         ]
       }
     ],
@@ -304,6 +309,20 @@
         "key": "全国_测试_appHome_position1",
         "ids": [
           "41"
+        ]
+      }
+    ,
+      {
+        "key": "全国_运营_appRec_position8",
+        "ids": [
+          "42"
+        ]
+      }
+    ,
+      {
+        "key": "全国_运营_appSearch_position8",
+        "ids": [
+          "42"
         ]
       }
     ],
