@@ -1,0 +1,346 @@
+{
+  "kwCourseAdList": [
+    {
+      "adId": "1",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/70/91/CgpOIF5k1ByAPuuZAACB44g20_g762.png",
+      "jumpUrl": "https://faxian.lagou.com/discover/be63880f3ca44d0689d4ab29eac5771f.html?ver=4"
+    },
+    {
+      "adId": "2",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/76/93/Cgq2xl5wpJWAMJsGAADvxihkumM397.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/java_architect.html?utm_source=app_edu"
+    },
+    {
+      "adId": "3",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/72/1C/CgpOIF5ngI2AKleWAACMLrH98vo809.png",
+      "jumpUrl": "https://kaiwu.lagou.com/test_engineer.html?userId=8255772"
+    },
+    {
+      "adId": "6",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/76/94/Cgq2xl5wpXCAVKDLAAEd8a68FmQ333.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/java_architect.html?utm_source=app_edu"
+    },
+    {
+      "adId": "7",
+      "pictureUrl": "https://www.lgstatic.com/mds-icon-fed/app/advertisement/test_list_1.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/test_engineer.html?userId=8255772"
+    },
+    {
+      "adId": "8",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/01/01/Ciqah154mQCAfZJmAADbCUnLJJA747.jpg",
+      "jumpUrl": "https://v.douyin.com/7A4M94/"
+    },
+    {
+      "adId": "9",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/12/79/CgqCHl7NzqiALjhYAACN_OCU-4M54.jpeg",
+      "jumpUrl": "https://kaiwu.lagou.com/java_basic.html"
+    },
+    {
+      "adId": "10",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/7B/79/Cgq2xl569lWASha0AAE1jYIs70I007.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/java_basic.html"
+    },
+    {
+      "adId": "11",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/02/A4/Ciqah157LvKANNevAADX2y5PEW0212.jpg",
+      "jumpUrl": "https://activity.lagou.com/topic/offersignal1.html"
+    },
+    {
+      "adId": "12",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/03/88/Ciqah158mq-AJ6PPAADV8assyVs278.jpg",
+      "jumpUrl": "https://v.douyin.com/7XqDnF/"
+    },
+    {
+      "adId": "13",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/04/3B/Ciqah15967yAM6shAADW7q9ePUo015.jpg",
+      "jumpUrl": " https://v.douyin.com/7GVX63/"
+    },
+    {
+      "adId": "14",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/07/1F/Ciqah16EBwaAFqxHAADtPCcEgUs463.jpg",
+      "jumpUrl": "https://faxian.lagou.com/discover/ec29339c2ad24259bd5199af2f04dfb7.html?ver=2"
+    },
+    {
+      "adId": "15",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/81/74/Cgq2xl6Fu6WAHLbMAADoS7oCGYk149.jpg",
+      "jumpUrl": "https://activity.lagou.com/topic/jinpaimsg.html"
+    },
+    {
+      "adId": "16",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/85/1F/Cgq2xl6Nnx2AQk8lAAFMLd857yw786.jpg",
+      "jumpUrl": "https://v.douyin.com/cfqMt8/"
+    },
+    {
+      "adId": "17",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/0C/FC/Ciqah16PBneAXkl6AADCErEJT68792.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/fe_enhancement.html"
+    },
+    {
+      "adId": "18",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/0C/FD/Ciqah16PB5aAenHTAABnvfx9Er0373.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/fe_enhancement.html"
+    },
+    {
+      "adId": "19",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/85/25/Cgq2xl6Npd6AMuduAAFKr0M3sgY993.jpg",
+      "jumpUrl": "https://v.douyin.com/cQNpf2/"
+    },
+    {
+      "adId": "20",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/0C/0F/Ciqah16NpheAW799AAFPvrz1ylI773.jpg",
+      "jumpUrl": "https://v.douyin.com/cpew4V/"
+    },
+    {
+      "adId": "21",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/88/74/Cgq2xl6Vd-eAOD_jAADm8D86o4U549.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/java_architect.html"
+    },
+    {
+      "adId": "22",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/88/74/Cgq2xl6VeBmAZOI1AAD8-oY_VMY903.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/java_architect.html"
+    },
+    {
+      "adId": "23",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/12/20/Ciqah16dQKCASpWqAAC3DmOR1kc948.jpg",
+      "jumpUrl": "https://faxian.lagou.com/discover/fd4044fdf4dc42d8b0b5525a6613342c.html?ver=1"
+    },
+    {
+      "adId": "24",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/16/2E/Ciqah16lTiOAPkTnAADe5XlVlFI503.jpg",
+      "jumpUrl": "https://faxian.lagou.com/discover/f5d14c7e2a31492eb76eb9883f4d873b.html?ver=2"
+    },
+    {
+      "adId": "25",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/02/E3/CgqCHl6yNmaAEUvzAAE3_7X6AlA631.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/course/courseInfo.htm?courseId=159&decorateId=166f094b84c641118b7f8b4427035260"
+    },
+    {
+      "adId": "26",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/05/91/CgqCHl62FbeAVTo3AAEMNJTM9Fw332.jpg",
+      "jumpUrl": "https://activity.lagou.com/topic/jinpaimsg3.html"
+    },
+    {
+      "adId": "27",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/0C/33/CgqCHl7CME6AQWbqAADu8SOKXFA69.jpeg",
+      "jumpUrl": "https://kaiwu.lagou.com/data_enhancement.html"
+    },
+    {
+      "adId": "28",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/0A/8F/Ciqc1F6-OaqAIl0HAADDfXFwVJI03.jpeg",
+      "jumpUrl": "https://kaiwu.lagou.com/course/appointment/show/185.htm"
+    },
+    {
+      "adId": "31",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/0C/28/Ciqc1F7CMOiASL8fAAEY8esQ1wQ69.jpeg",
+      "jumpUrl": "https://kaiwu.lagou.com/data_enhancement.html"
+    },
+    {
+      "adId": "32",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/0D/45/CgqCHl7DnfqAZI_dAADJP2VkrPg12.jpeg",
+      "jumpUrl": "https://kaiwu.lagou.com/course/courseInfo.htm?courseId=185&decorateId=c414dc278814417b97b432d262cfb7ad"
+    },
+    {
+      "adId": "33",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/0E/C1/Ciqc1F7GPgqAbVpHAAD7giShFo4857.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/java_architect.html"
+    },
+    {
+      "adId": "34",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/0E/76/CgqCHl7F6-mANGvwAAE2Wnq-I_w930.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/java_architect.html"
+    },
+    {
+      "adId": "35",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/0E/76/CgqCHl7F6-mANGvwAAE2Wnq-I_w930.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/java_architect.html"
+    },
+    {
+      "adId": "36",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/12/13/CgqCHl7M5CWAahz9AABwb0C3f08337.png",
+      "jumpUrl": "https://kaiwu.lagou.com/course/courseInfo.htm?courseId=117&decorateId=07cc97c77fb64d969b667587c8178254"
+    },
+    {
+      "adId": "37",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/12/13/CgqCHl7M5CWAahz9AABwb0C3f08337.png",
+      "jumpUrl": "https://kaiwu.lagou.com/course/courseInfo.htm?courseId=117&decorateId=07cc97c77fb64d969b667587c8178254"
+    },
+    {
+      "adId": "38",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/12/B3/Ciqc1F7OD52Ae3r1AADwGyvE6F4609.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/test_engineer.html?latest_utm_source=jingangwei"
+    },
+    {
+      "adId": "39",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/12/C0/CgqCHl7OEIeAQGy4AADuAa08-pM265.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/test_engineer.html?latest_utm_source=xinxiliu"
+    },
+    {
+      "adId": "40",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/12/C0/CgqCHl7OEIeAQGy4AADuAa08-pM265.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/test_engineer.html?latest_utm_source=sousuo"
+    },
+    {
+      "adId": "41",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/14/6E/CgqCHl7QzaaAVET-AAD3SuoEep0386.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/course/courseInfo.htm?courseId=243&decorateId=acd97146ec9e43e4b78173e60d37b9e5&token=4658eff97e3041309c1f799dc426439a"
+    }
+  ],
+  "kwCourseAdConfig": {
+    "firstRecommandPositions": [],
+    "secondRecommandPositions": [],
+    "threeRecommandPositions": [],
+    "globalFirstRecommandPositions": [
+      {
+        "key": "全国_开发|测试|运维类_appHome_position1",
+        "ids": [
+          "9"
+        ]
+      },
+      {
+        "key": "全国_运营|编辑|客服类_appHome_position1",
+        "ids": [
+          "36"
+        ]
+      },
+      {
+        "key": "全国_市场|商务类_appHome_position1",
+        "ids": [
+          "36"
+        ]
+      },
+      {
+        "key": "全国_销售类_appHome_position1",
+        "ids": [
+          "36"
+        ]
+      },
+      {
+        "key": "全国_MCN|直播|网红_appHome_position1",
+        "ids": [
+          "36"
+        ]
+      },
+      {
+        "key": "全国_运营|编辑|客服类_appRec_position8",
+        "ids": [
+          "37"
+        ]
+      },
+      {
+        "key": "全国_市场|商务类_appRec_position8",
+        "ids": [
+          "37"
+        ]
+      },
+      {
+        "key": "全国_销售类_appRec_position8",
+        "ids": [
+          "37"
+        ]
+      },
+      {
+        "key": "全国_MCN|直播|网红_appRec_position8",
+        "ids": [
+          "37"
+        ]
+      }
+    ],
+    "globalSecondRecommandPositions": [
+      {
+        "ids": [
+          "27"
+        ],
+        "key": "全国_数据开发_appHome_position1"
+      },
+      {
+        "ids": [
+          "27"
+        ],
+        "key": "全国_后端开发_appHome_position1"
+      }
+    ,
+      {
+        "key": "全国_移动前端开发_appHome_position1",
+        "ids": [
+          "17"
+        ]
+      },
+      {
+        "key": "全国_前端开发_appHome_position1",
+        "ids": [
+          "17"
+        ]
+      },
+      {
+        "key": "全国_测试_appRec_position8",
+        "ids": [
+          "39"
+        ]
+      }
+    ,
+      {
+        "key": "全国_测试_appRec_position51",
+        "ids": [
+          "39"
+        ]
+      }
+    ,
+      {
+        "key": "全国_测试_appSearch_position8",
+        "ids": [
+          "40"
+        ]
+      }
+    ,
+      {
+        "key": "全国_测试_appSearch_position51",
+        "ids": [
+          "40"
+        ]
+      }
+    ,
+      {
+        "key": "全国_测试_appHome_position1",
+        "ids": [
+          "41"
+        ]
+      }
+    ],
+    "globalThreeRecommandPositions": [
+      {
+        "ids": [
+          "33"
+        ],
+        "key": "全国_Java_appHome_position1"
+      },
+      {
+        "ids": [
+          "34"
+        ],
+        "key": "全国_Java_appRec_position8"
+      },
+      {
+        "ids": [
+          "35"
+        ],
+        "key": "全国_Java_appRec_position51"
+      }
+    ],
+    "allRecommandPositions": [],
+    "globalAllRecommandPositions": [
+
+    ]
+  },
+  "kwCourseRecommodCity9": [
+    "北京",
+    "上海",
+    "广州",
+    "深圳",
+    "成都",
+    "武汉",
+    "南京",
+    "苏州",
+    "杭州"
+  ]
+}
