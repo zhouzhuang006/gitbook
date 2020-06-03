@@ -1,10 +1,7 @@
 # Java P6+ 学习指南
 
 
-
 ### “除非发自内心，你将一事无成”
-
-
 
 
 * [必备工具箱](tools/readme.md)
@@ -26,8 +23,6 @@
 * [面试宝典](Interview/readme.md)
 
 * [附件](other/readme.md)
+
+
   
-    
-
-
-
