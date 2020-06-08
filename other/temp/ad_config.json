@@ -189,6 +189,31 @@
       "adId": "42",
       "pictureUrl": "https://www.lgstatic.com/i/image/M00/16/8D/Ciqc1F7V5mWAemTMAAC8QX-dvrM858.jpg",
       "jumpUrl": "https://kaiwu.lagou.com/course/courseInfo.htm?courseId=230&decorateId=ebeb1d62941d4fab8516cebca656f6b6"
+    },
+    {
+      "adId": "43",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/18/8C/Ciqc1F7YyVCAa-vDAAA4LKSUzgI264.png",
+      "jumpUrl": "https://shenceyun.lagou.com/t/K3"
+    },
+    {
+      "adId": "44",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/18/8C/Ciqc1F7YyVCAa-vDAAA4LKSUzgI264.png",
+      "jumpUrl": "https://shenceyun.lagou.com/t/X3"
+    },
+    {
+      "adId": "45",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/1B/1E/CgqCHl7eE_WAFF9OAAELHxN-PLA206.jpg",
+      "jumpUrl": "https://faxian.lagou.com/discover/b115627e3b354a61bc930b30b69e6104.html?ver=2"
+    },
+    {
+      "adId": "46",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/1A/F8/Ciqc1F7d-zaABkcfAAG0n3488fQ862.png",
+      "jumpUrl": "https://shenceyun.lagou.com/t/B1"
+    },
+    {
+      "adId": "47",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/1A/F8/Ciqc1F7d-zaABkcfAAG0n3488fQ862.png",
+      "jumpUrl": "https://shenceyun.lagou.com/t/K1"
     }
   ],
   "kwCourseAdConfig": {
@@ -200,54 +225,6 @@
         "key": "全国_开发|测试|运维类_appHome_position1",
         "ids": [
           "9"
-        ]
-      },
-      {
-        "key": "全国_开发|测试|运维类_appRec_position8",
-        "ids": [
-          "42"
-        ]
-      },
-      {
-        "key": "全国_产品|需求|项目类_appRec_position8",
-        "ids": [
-          "42"
-        ]
-      },
-      {
-        "key": "全国_市场|商务类_appRec_position8",
-        "ids": [
-          "42"
-        ]
-      },
-      {
-        "key": "全国_综合职能|高级管理_appRec_position8",
-        "ids": [
-          "42"
-        ]
-      },
-      {
-        "key": "全国_开发|测试|运维类_appSearch_position8",
-        "ids": [
-          "42"
-        ]
-      },
-      {
-        "key": "全国_产品|需求|项目类_appSearch_position8",
-        "ids": [
-          "42"
-        ]
-      },
-      {
-        "key": "全国_市场|商务类_appSearch_position8",
-        "ids": [
-          "42"
-        ]
-      },
-      {
-        "key": "全国_综合职能|高级管理_appSearch_position8",
-        "ids": [
-          "42"
         ]
       }
     ],
@@ -310,19 +287,35 @@
         "ids": [
           "41"
         ]
-      }
-    ,
+      },
       {
-        "key": "全国_运营_appRec_position8",
+        "key": "全国_前端开发_appHome_position1",
         "ids": [
-          "42"
+          "45"
         ]
-      }
-    ,
+      },
       {
-        "key": "全国_运营_appSearch_position8",
+        "key": "全国_移动前端开发_appRec_position8",
         "ids": [
-          "42"
+          "46"
+        ]
+      },
+      {
+        "key": "全国_前端开发_appRec_position8",
+        "ids": [
+          "46"
+        ]
+      },
+      {
+        "key": "全国_移动前端开发_appSearch_position8",
+        "ids": [
+          "47"
+        ]
+      },
+      {
+        "key": "全国_前端开发_appSearch_position8",
+        "ids": [
+          "47"
         ]
       }
     ],
