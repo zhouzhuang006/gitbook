@@ -117,9 +117,6 @@
     * [数据结构](algorithms/DataStructures/readme.md)
     * [算法篇](algorithms/Algorithms/readme.md)
     * [leetcode算法](algorithms/leetcode/index.md)
-        * [等式方程的可满足性](algorithms/leetcode/problems/20200608.md)
-        * [把数字翻译成字符串](algorithms/leetcode/problems/20200609.md)
-        * [回文数](algorithms/leetcode/problems/20200610.md)
         * [每日打卡一道算法](algorithms/leetcode/problems/everyday.md)
 * [面试宝典](Interview/readme.md)
     * [高频面试题](Interview/HighFrequency.md)
@@ -130,4 +127,5 @@
         * [SpringBoot 原理](Interview/HighFrequency/SpringBoot.md)
 * [其他](other/index.md)
     * [2019javaP6笔记](other/2019javaP6/index.md)
+    * [《Java开发手册》v1.5.0 华山版](other/alicode.md)
 
