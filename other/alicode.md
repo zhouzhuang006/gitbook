@@ -2012,24 +2012,24 @@ map.put("size", size);
 
 ## 附 2：专有名词解释
 
-1. POJO（Plain Ordinary Java Object）: 在本手册中，POJO 专指只有 setter / getter / toString 的简单类，包括 DO/DTO/BO/VO 等。
+1.POJO（Plain Ordinary Java Object）: 在本手册中，POJO 专指只有 setter / getter / toString 的简单类，包括 DO/DTO/BO/VO 等。
 
-2. GAV（GroupId、ArtifactctId、Version）: Maven 坐标，是用来唯一标识 jar 包。
+2.GAV（GroupId、ArtifactctId、Version）: Maven 坐标，是用来唯一标识 jar 包。
 
-3. OOP（Object Oriented Programming）: 本手册泛指类、对象的编程处理方式。
+3.OOP（Object Oriented Programming）: 本手册泛指类、对象的编程处理方式。
 
-4. ORM（Object Relation Mapping）: 对象关系映射，对象领域模型与底层数据之间的转换，本文泛指 iBATIS, mybatis 等框架。
+4.ORM（Object Relation Mapping）: 对象关系映射，对象领域模型与底层数据之间的转换，本文泛指 iBATIS, mybatis 等框架。
 
-5. NPE（java.lang.NullPointerException）: 空指针异常。
+5.NPE（java.lang.NullPointerException）: 空指针异常。
 
-6. SOA（Service-Oriented Architecture）: 面向服务架构，它可以根据需求通过网络对松散耦合的粗粒度应用组件进行分布式部署、组合和使用，有利于提升组件可重用性，可维护性。
+6.SOA（Service-Oriented Architecture）: 面向服务架构，它可以根据需求通过网络对松散耦合的粗粒度应用组件进行分布式部署、组合和使用，有利于提升组件可重用性，可维护性。
 
-7. IDE（Integrated Development Environment）: 用于提供程序开发环境的应用程序，一般包括代码编辑器、编译器、调试器和图形用户界面等工具，本《手册》泛指 IntelliJ IDEA 和eclipse。
+7.IDE（Integrated Development Environment）: 用于提供程序开发环境的应用程序，一般包括代码编辑器、编译器、调试器和图形用户界面等工具，本《手册》泛指 IntelliJ IDEA 和eclipse。
 
-8. OOM（Out Of Memory）: 源于 java.lang.OutOfMemoryError，当 JVM 没有足够的内存来为对象分配空间并且垃圾回收器也无法回收空间时，系统出现的严重状况。
+8.OOM（Out Of Memory）: 源于 java.lang.OutOfMemoryError，当 JVM 没有足够的内存来为对象分配空间并且垃圾回收器也无法回收空间时，系统出现的严重状况。
 
-9. 一方库：本工程内部子项目模块依赖的库（jar 包）。
+9.一方库：本工程内部子项目模块依赖的库（jar 包）。
 
-10. 二方库：公司内部发布到中央仓库，可供公司内部其它应用依赖的库（jar 包）。
+10.二方库：公司内部发布到中央仓库，可供公司内部其它应用依赖的库（jar 包）。
 
-11. 三方库：公司之外的开源库（jar 包）。
+11.三方库：公司之外的开源库（jar 包）。
