@@ -214,6 +214,46 @@
       "adId": "47",
       "pictureUrl": "https://www.lgstatic.com/i/image/M00/1A/F8/Ciqc1F7d-zaABkcfAAG0n3488fQ862.png",
       "jumpUrl": "https://shenceyun.lagou.com/t/K1"
+    },
+    {
+      "adId": "48",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/1F/63/CgqCHl7m8HSAItIdAADJALPUQlE845.png",
+      "jumpUrl": "https://kaiwu.lagou.com/java_architect.html?utm_source=lagou&utm_medium=jingangwei&utm_term=618&utm_content=618&utm_campaign=Java%E5%B7%A5%E7%A8%8B%E5%B8%88%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5"
+    },
+    {
+      "adId": "49",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/1F/93/CgqCHl7nFcqAOq86AADRY-tr1eY194.png",
+      "jumpUrl": "https://kaiwu.lagou.com/fe_enhancement.html?utm_source=lagou&utm_medium=jingangwei&utm_term=618&utm_content=618&utm_campaign=%E5%A4%A7%E5%89%8D%E7%AB%AF%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5"
+    },
+    {
+      "adId": "50",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/1F/89/Ciqc1F7nFkuAGApSAADIxRDOUYM292.png",
+      "jumpUrl": "https://kaiwu.lagou.com/data_enhancement.html?utm_source=lagou&utm_medium=jingangwei&utm_term=618&utm_content=618&utm_campaign=%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5"
+    },
+    {
+      "adId": "51",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/1F/8A/Ciqc1F7nFrKAezvDAAC-AFRLrao362.png",
+      "jumpUrl": "https://kaiwu.lagou.com/java_basic.html?utm_source=lagou&utm_medium=jingangwei&utm_term=618&utm_content=618&utm_campaign=Java%E5%B0%B1%E4%B8%9A%E6%80%A5%E8%AE%AD%E8%90%A5#/index"
+    },
+    {
+      "adId": "52",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/1F/9D/CgqCHl7nGwaAbKfOAADgJarG8TE177.png",
+      "jumpUrl": "https://kaiwu.lagou.com/java_architect.html?utm_source=lagou&utm_medium=jingangwei&utm_term=618&utm_content=618&utm_campaign=Java%E5%B7%A5%E7%A8%8B%E5%B8%88%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5"
+    },
+    {
+      "adId": "53",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/1F/9C/CgqCHl7nGs2ANnMiAADPgTiDjZA771.png",
+      "jumpUrl": "https://kaiwu.lagou.com/fe_enhancement.html?utm_source=lagou&utm_medium=jingangwei&utm_term=618&utm_content=618&utm_campaign=%E5%A4%A7%E5%89%8D%E7%AB%AF%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5"
+    },
+    {
+      "adId": "54",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/1F/91/Ciqc1F7nGumAXLHIAADd_5LAi_g847.png",
+      "jumpUrl": "https://kaiwu.lagou.com/data_enhancement.html?utm_source=lagou&utm_medium=jingangwei&utm_term=618&utm_content=618&utm_campaign=%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5"
+    },
+    {
+      "adId": "55",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/1F/91/Ciqc1F7nGx-AISR9AADKj2nk_-o019.png",
+      "jumpUrl": "https://kaiwu.lagou.com/java_basic.html?utm_source=lagou&utm_medium=jingangwei&utm_term=618&utm_content=618&utm_campaign=Java%E5%B0%B1%E4%B8%9A%E6%80%A5%E8%AE%AD%E8%90%A5#/index"
     }
   ],
   "kwCourseAdConfig": {
@@ -225,6 +265,186 @@
         "key": "全国_开发|测试|运维类_appHome_position1",
         "ids": [
           "9"
+        ]
+      },
+      {
+        "key": "全国_产品|需求|项目类_appHome_position1",
+        "ids": [
+          "51"
+        ]
+      },
+      {
+        "key": "全国_运营|编辑|客服类_appHome_position1",
+        "ids": [
+          "51"
+        ]
+      },
+      {
+        "key": "全国_市场|商务类_appHome_position1",
+        "ids": [
+          "51"
+        ]
+      },
+      {
+        "key": "全国_销售类_appHome_position1",
+        "ids": [
+          "51"
+        ]
+      },
+      {
+        "key": "全国_金融类_appHome_position1",
+        "ids": [
+          "51"
+        ]
+      },
+      {
+        "key": "全国_MCN|直播|网红_appHome_position1",
+        "ids": [
+          "51"
+        ]
+      },
+      {
+        "key": "全国_产品|需求|项目类_appRec_position8",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_运营|编辑|客服类_appRec_position8",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_市场|商务类_appRec_position8",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_销售类_appRec_position8",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_金融类_appRec_position8",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_MCN|直播|网红_appRec_position8",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_产品|需求|项目类_appRec_position51",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_运营|编辑|客服类_appRec_position51",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_市场|商务类_appRec_position51",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_销售类_appRec_position51",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_金融类_appRec_position51",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_MCN|直播|网红_appRec_position51",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_产品|需求|项目类_appSearch_position8",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_运营|编辑|客服类_appSearch_position8",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_市场|商务类_appSearch_position8",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_销售类_appSearch_position8",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_金融类_appSearch_position8",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_MCN|直播|网红_appSearch_position8",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_产品|需求|项目类_appSearch_position51",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_运营|编辑|客服类_appSearch_position51",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_市场|商务类_appSearch_position51",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_销售类_appSearch_position51",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_金融类_appSearch_position51",
+        "ids": [
+          "55"
+        ]
+      },
+      {
+        "key": "全国_MCN|直播|网红_appSearch_position51",
+        "ids": [
+          "55"
         ]
       }
     ],
@@ -240,8 +460,7 @@
           "27"
         ],
         "key": "全国_后端开发_appHome_position1"
-      }
-    ,
+      },
       {
         "key": "全国_移动前端开发_appHome_position1",
         "ids": [
@@ -265,26 +484,113 @@
         "ids": [
           "39"
         ]
-      }
-    ,
+      },
       {
         "key": "全国_测试_appRec_position51",
         "ids": [
           "39"
         ]
-      }
-    ,
+      },
       {
         "key": "全国_测试_appSearch_position8",
         "ids": [
           "40"
         ]
-      }
-    ,
+      },
       {
         "key": "全国_测试_appSearch_position51",
         "ids": [
           "40"
+        ]
+      },
+      {
+        "key": "全国_前端开发_appHome_position1",
+        "ids": [
+          "49"
+        ]
+      },
+      {
+        "key": "全国_后端开发_appHome_position1",
+        "ids": [
+          "50"
+        ]
+      },
+      {
+        "key": "全国_数据开发_appHome_position1",
+        "ids": [
+          "50"
+        ]
+      },
+      {
+        "key": "全国_前端开发_appRec_position8",
+        "ids": [
+          "53"
+        ]
+      },
+      {
+        "key": "全国_后端开发_appRec_position8",
+        "ids": [
+          "54"
+        ]
+      },
+      {
+        "key": "全国_数据开发_appRec_position8",
+        "ids": [
+          "54"
+        ]
+      },
+      {
+        "key": "全国_前端开发_appRec_position51",
+        "ids": [
+          "53"
+        ]
+      },
+      {
+        "key": "全国_后端开发_appRec_position51",
+        "ids": [
+          "54"
+        ]
+      },
+      {
+        "key": "全国_数据开发_appRec_position51",
+        "ids": [
+          "54"
+        ]
+      },
+      {
+        "key": "全国_前端开发_appSearch_position8",
+        "ids": [
+          "53"
+        ]
+      },
+      {
+        "key": "全国_后端开发_appSearch_position8",
+        "ids": [
+          "54"
+        ]
+      },
+      {
+        "key": "全国_数据开发_appSearch_position8",
+        "ids": [
+          "54"
+        ]
+      },
+      {
+        "key": "全国_前端开发_appSearch_position51",
+        "ids": [
+          "53"
+        ]
+      },
+      {
+        "key": "全国_后端开发_appSearch_position51",
+        "ids": [
+          "54"
+        ]
+      },
+      {
+        "key": "全国_数据开发_appSearch_position51",
+        "ids": [
+          "54"
         ]
       }
     ],
@@ -306,11 +612,40 @@
           "35"
         ],
         "key": "全国_Java_appRec_position51"
+      },
+      {
+        "ids": [
+          "48"
+        ],
+        "key": "全国_Java_appHome_position1"
+      },
+      {
+        "ids": [
+          "52"
+        ],
+        "key": "全国_Java_appRec_position8"
+      },
+      {
+        "ids": [
+          "52"
+        ],
+        "key": "全国_Java_appRec_position51"
+      },
+      {
+        "ids": [
+          "52"
+        ],
+        "key": "全国_Java_appSearch_position8"
+      },
+      {
+        "ids": [
+          "52"
+        ],
+        "key": "全国_Java_appSearch_position51"
       }
     ],
     "allRecommandPositions": [],
     "globalAllRecommandPositions": [
-
     ]
   },
   "kwCourseRecommodCity9": [
