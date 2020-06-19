@@ -254,6 +254,46 @@
       "adId": "55",
       "pictureUrl": "https://www.lgstatic.com/i/image/M00/1F/91/Ciqc1F7nGx-AISR9AADKj2nk_-o019.png",
       "jumpUrl": "https://kaiwu.lagou.com/java_basic.html?utm_source=lagou&utm_medium=jingangwei&utm_term=618&utm_content=618&utm_campaign=Java%E5%B0%B1%E4%B8%9A%E6%80%A5%E8%AE%AD%E8%90%A5#/index"
+    },
+    {
+      "adId": "56",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/88/74/Cgq2xl6Vd-eAOD_jAADm8D86o4U549.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/java_architect.html?utm_source=lagou&utm_medium=jingangbanner&utm_term=620&utm_campaign=Java%E5%B7%A5%E7%A8%8B%E5%B8%88%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5"
+    },
+    {
+      "adId": "57",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/0C/FC/Ciqah16PBneAXkl6AADCErEJT68792.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/fe_enhancement.html?utm_source=lagou&utm_medium=jingangbanner&utm_term=620&utm_content=620&utm_campaign=%E5%A4%A7%E5%89%8D%E7%AB%AF%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5"
+    },
+    {
+      "adId": "58",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/0C/33/CgqCHl7CME6AQWbqAADu8SOKXFA69.jpeg",
+      "jumpUrl": "https://kaiwu.lagou.com/data_enhancement.html?utm_source=lagou&utm_medium=jingangbanner&utm_term=620&utm_content=620&utm_campaign=%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5"
+    },
+    {
+      "adId": "59",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/22/C0/CgqCHl7sab-ATO6_AACGhkE-TjM992.png",
+      "jumpUrl": "https://kaiwu.lagou.com/java_basic.html?utm_source=lagou&utm_medium=jingangbanner&utm_term=620&utm_content=620&utm_campaign=Java%E5%B0%B1%E4%B8%9A%E6%80%A5%E8%AE%AD%E8%90%A5"
+    },
+    {
+      "adId": "60",
+      "pictureUrl": "https://www.lgstatic.com/i/image3/M01/88/74/Cgq2xl6VeBmAZOI1AAD8-oY_VMY903.jpg",
+      "jumpUrl": "https://kaiwu.lagou.com/java_architect.html?utm_source=lagou&utm_medium=jingangbanner&utm_term=620&utm_campaign=Java%E5%B7%A5%E7%A8%8B%E5%B8%88%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5"
+    },
+    {
+      "adId": "61",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/22/C7/CgqCHl7sbwaAek1NAACAyAYm7Do448.png",
+      "jumpUrl": "https://kaiwu.lagou.com/fe_enhancement.html?utm_source=lagou&utm_medium=jingangbanner&utm_term=620&utm_content=620&utm_campaign=%E5%A4%A7%E5%89%8D%E7%AB%AF%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5"
+    },
+    {
+      "adId": "62",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/22/C8/CgqCHl7sbyOAW83PAACSQjElvdM569.png",
+      "jumpUrl": "https://kaiwu.lagou.com/data_enhancement.html?utm_source=lagou&utm_medium=jingangbanner&utm_term=620&utm_content=620&utm_campaign=%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E9%AB%98%E8%96%AA%E8%AE%AD%E7%BB%83%E8%90%A5"
+    },
+    {
+      "adId": "63",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/22/C8/CgqCHl7sb0-AfcxRAACRHK9-CvE533.png",
+      "jumpUrl": "https://kaiwu.lagou.com/java_basic.html?utm_source=lagou&utm_medium=jingangbanner&utm_term=620&utm_content=620&utm_campaign=Java%E5%B0%B1%E4%B8%9A%E6%80%A5%E8%AE%AD%E8%90%A5"
     }
   ],
   "kwCourseAdConfig": {
@@ -446,6 +486,98 @@
         "ids": [
           "55"
         ]
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_产品|需求|项目类_appHome_position1"
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_产品|需求|项目类_appRec_position8"
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_产品|需求|项目类_appRec_position51"
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_产品|需求|项目类_appSearch_position8"
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_产品|需求|项目类_appSearch_position51"
+      },
+
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_运营|编辑|客服类_appHome_position1"
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_运营|编辑|客服类_appRec_position8"
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_运营|编辑|客服类_appRec_position51"
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_运营|编辑|客服类_appSearch_position8"
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_运营|编辑|客服类_appSearch_position51"
+      },
+
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_市场|商务类_appHome_position1"
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_市场|商务类_appRec_position8"
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_市场|商务类_appRec_position51"
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_市场|商务类_appSearch_position8"
+      },
+      {
+        "ids": [
+          "59"
+        ],
+        "key": "全国_市场|商务类_appSearch_position51"
       }
     ],
     "globalSecondRecommandPositions": [
@@ -592,6 +724,128 @@
         "ids": [
           "54"
         ]
+      },
+      {
+        "ids": [
+          "57"
+        ],
+        "key": "全国_移动前端开发_appHome_position1"
+      },
+      {
+        "ids": [
+          "57"
+        ],
+        "key": "全国_移动前端开发_appRec_position8"
+      },
+      {
+        "ids": [
+          "57"
+        ],
+        "key": "全国_移动前端开发_appRec_position51"
+      },
+      {
+        "ids": [
+          "57"
+        ],
+        "key": "全国_移动前端开发_appSearch_position8"
+      },
+      {
+        "ids": [
+          "57"
+        ],
+        "key": "全国_移动前端开发_appSearch_position51"
+      },
+      {
+        "ids": [
+          "57"
+        ],
+        "key": "全国_前端开发_appHome_position1"
+      },
+      {
+        "ids": [
+          "57"
+        ],
+        "key": "全国_前端开发_appRec_position8"
+      },
+      {
+        "ids": [
+          "57"
+        ],
+        "key": "全国_前端开发_appRec_position51"
+      },
+      {
+        "ids": [
+          "57"
+        ],
+        "key": "全国_前端开发_appSearch_position8"
+      },
+      {
+        "ids": [
+          "57"
+        ],
+        "key": "全国_前端开发_appSearch_position51"
+      },
+
+      {
+        "ids": [
+          "58"
+        ],
+        "key": "全国_后端开发_appHome_position1"
+      },
+      {
+        "ids": [
+          "58"
+        ],
+        "key": "全国_后端开发_appRec_position8"
+      },
+      {
+        "ids": [
+          "58"
+        ],
+        "key": "全国_后端开发_appRec_position51"
+      },
+      {
+        "ids": [
+          "58"
+        ],
+        "key": "全国_后端开发_appSearch_position8"
+      },
+      {
+        "ids": [
+          "58"
+        ],
+        "key": "全国_后端开发_appSearch_position51"
+      },
+
+      {
+        "ids": [
+          "58"
+        ],
+        "key": "全国_数据开发_appHome_position1"
+      },
+      {
+        "ids": [
+          "58"
+        ],
+        "key": "全国_数据开发_appRec_position8"
+      },
+      {
+        "ids": [
+          "58"
+        ],
+        "key": "全国_数据开发_appRec_position51"
+      },
+      {
+        "ids": [
+          "58"
+        ],
+        "key": "全国_数据开发_appSearch_position8"
+      },
+      {
+        "ids": [
+          "58"
+        ],
+        "key": "全国_数据开发_appSearch_position51"
       }
     ],
     "globalThreeRecommandPositions": [
@@ -640,6 +894,36 @@
       {
         "ids": [
           "52"
+        ],
+        "key": "全国_Java_appSearch_position51"
+      },
+      {
+        "ids": [
+          "56"
+        ],
+        "key": "全国_Java_appHome_position1"
+      },
+      {
+        "ids": [
+          "60"
+        ],
+        "key": "全国_Java_appRec_position8"
+      },
+      {
+        "ids": [
+          "60"
+        ],
+        "key": "全国_Java_appRec_position51"
+      },
+      {
+        "ids": [
+          "60"
+        ],
+        "key": "全国_Java_appSearch_position8"
+      },
+      {
+        "ids": [
+          "60"
         ],
         "key": "全国_Java_appSearch_position51"
       }
