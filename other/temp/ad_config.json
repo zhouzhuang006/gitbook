@@ -296,9 +296,9 @@
       "jumpUrl": "https://kaiwu.lagou.com/java_basic.html?utm_source=lagou&utm_medium=jingangbanner&utm_term=620&utm_content=620&utm_campaign=Java%E5%B0%B1%E4%B8%9A%E6%80%A5%E8%AE%AD%E8%90%A5"
     },
     {
-      "adId": "63",
-      "pictureUrl": "https://www.lgstatic.com/i/image/M00/22/C8/CgqCHl7sb0-AfcxRAACRHK9-CvE533.png",
-      "jumpUrl": "https://kaiwu.lagou.com/java_basic.html?utm_source=lagou&utm_medium=jingangbanner&utm_term=620&utm_content=620&utm_campaign=Java%E5%B0%B1%E4%B8%9A%E6%80%A5%E8%AE%AD%E8%90%A5"
+      "adId": "64",
+      "pictureUrl": "https://www.lgstatic.com/i/image/M00/26/FE/CgqCHl7zUjqAYUD4AACdbw1b6bM908.png",
+      "jumpUrl": "https://kaiwu.lagou.com/data_analysis.html?utm_source=lagou&utm_medium=tuijian8&utm_campaign=%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98%E8%AE%AD%E7%BB%83%E8%90%A5"
     },
     {
       "adId": "65",
@@ -429,12 +429,6 @@
         "ids": [
           "63"
         ],
-        "key": "全国_产品|需求|项目类_appRec_position8"
-      },
-      {
-        "ids": [
-          "63"
-        ],
         "key": "全国_产品|需求|项目类_appRec_position51"
       },
       {
@@ -448,12 +442,6 @@
           "63"
         ],
         "key": "全国_产品|需求|项目类_appSearch_position51"
-      },
-      {
-        "ids": [
-          "63"
-        ],
-        "key": "全国_运营|编辑|客服类_appRec_position8"
       },
       {
         "ids": [
@@ -477,12 +465,6 @@
         "ids": [
           "63"
         ],
-        "key": "全国_市场|商务类_appRec_position8"
-      },
-      {
-        "ids": [
-          "63"
-        ],
         "key": "全国_市场|商务类_appRec_position51"
       },
       {
@@ -501,25 +483,25 @@
         "ids": [
           "64"
         ],
-        "key": "全国_产品|需求|项目类_appHome_position1"
+        "key": "全国_产品|需求|项目类_appRec_position8"
       },
       {
         "ids": [
           "64"
         ],
-        "key": "全国_营|编辑|客服类_appHome_position1"
+        "key": "全国_营|编辑|客服类_appRec_position8"
       },
       {
         "ids": [
           "64"
         ],
-        "key": "全国_市场|商务类_appHome_position1"
+        "key": "全国_市场|商务类_appRec_position8"
       },
       {
         "ids": [
           "64"
         ],
-        "key": "全国_金融类_appHome_position1"
+        "key": "全国_金融类_appRec_position8"
       },
       {
         "ids": [
@@ -815,7 +797,7 @@
         "ids": [
           "64"
         ],
-        "key": "全国_数据分析_appHome_position1"
+        "key": "全国_数据分析_appRec_position8"
       },
       {
         "ids": [
@@ -907,7 +889,7 @@
         "ids": [
           "64"
         ],
-        "key": "全国_数据分析_appHome_position1"
+        "key": "全国_数据分析_appRec_position8"
       },
       {
         "ids": [
