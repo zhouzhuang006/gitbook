@@ -125,7 +125,7 @@
         * [面试必问之JVM篇](Interview/HighFrequency/jvm.md)
         * [垃圾回收机制](Interview/HighFrequency/gc.md)
         * [SpringBoot 原理](Interview/HighFrequency/SpringBoot.md)
-* [其他](other/index.md)
+* [附件其他](other/index.md)
     * [2019-JavaP6笔记](other/2019javaP6/index.md)
     * [Java开发手册-v1.5.0 华山版](other/alicode.md)
 

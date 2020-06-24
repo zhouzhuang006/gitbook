@@ -22,7 +22,7 @@
   
 * [面试宝典](Interview/readme.md)
 
-* [附件](other/index.md)
+* [附件其他](other/index.md)
 
 
 

@@ -2,11 +2,5 @@
 
 
 
-## 每日一道算法题
-
-
-
-* [等式方程的可满足性](problems/20200608.md)
-* [把数字翻译成字符串](problems/20200609.md)
-* [回文数](problems/20200610.md)
+- 每日一道算法题 [everyday.md](problems\everyday.md) 
 

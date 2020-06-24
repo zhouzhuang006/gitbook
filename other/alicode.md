@@ -2254,7 +2254,7 @@ map.put("size", size);
 
 （正确， 推荐使用）
 
- 
+
 
 12.关于索引的设计，下列哪些说法符合《阿里巴巴Java开发手册》：【ACD】 
 
@@ -2816,7 +2816,7 @@ UnsupportedOperationException。
 
 1、利用索引进行排序,下列哪些说法是正确的:多选【AB】
 
-A.查询语句 WHERE a = 10 ORDER BYb,可以利用素引(a，b)来进行索引排序。
+A.查询语句 WHERE a = 10 ORDER BY b,可以利用素引(a，b)来进行索引排序。
 
 B.查询语句WHERE a > 10 ORDER BY b,不可以利用素引(a，b)进行索引排序。
 
@@ -2824,17 +2824,11 @@ C.查询语句WHERE a IN (10, 11) ODER BY b.可以利用索引(a，b)来进行�
 
 D.查询语句WHER a>10 AND b=20 ORDER BY a,可以利用索引(b，a)来进行素引排序。
 
- 
-
 解析：--where a in(...) order by b,c (对于排序来说，多个等于条件，也是范围查询)。又因为：比如索引中有范围查找，那么索引有序性无法利用。
 
  
 
- 
-
- 
-
-2、sont表示元素在存入集合时进行了排序,数据遍历的结果是按某个排序规则输出的;而order表示每次遍历的序列都是一样的,元素前后关系每次遍历都是确定的,那么下列哪些集合既是sort,又是order的：单选 D
+2、sort表示元素在存入集合时进行了排序,数据遍历的结果是按某个排序规则输出的;而order表示每次遍历的序列都是一样的,元素前后关系每次遍历都是确定的,那么下列哪些集合既是sort,又是order的：单选 D
 A、HashSet
 B、LinkedList
 C、HashMap
